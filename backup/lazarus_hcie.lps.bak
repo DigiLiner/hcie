@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <ManyBuildModesSelection Value="Amiga"/>
+    <BuildModes Active="Windows 32"/>
+    <Units>
+      <Unit>
+        <Filename Value="lazarus_hcie.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="17"/>
+        <CursorPos X="56" Y="13"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitformmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitFormMain"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="565"/>
+        <CursorPos X="42" Y="564"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="201"/>
+        <Bookmarks Count="4">
+          <Item0 Y="520" ID="3"/>
+          <Item1 X="13" Y="487" ID="7"/>
+          <Item2 X="45" Y="564" ID="1"/>
+          <Item3 X="4" Y="240" ID="2"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hccolorbox2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="HcColorFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="49"/>
+        <CursorPos X="8" Y="77"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="line.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="9"/>
+        <CursorPos Y="29"/>
+        <UsageCount Value="216"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hcglobals.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="hcGlobals"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="10"/>
+        <CursorPos X="26" Y="20"/>
+        <UsageCount Value="216"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pen.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="21"/>
+        <CursorPos Y="27"/>
+        <UsageCount Value="215"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="animation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23" Y="70"/>
+        <UsageCount Value="200"/>
+      </Unit>
+      <Unit>
+        <Filename Value="circle.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="12"/>
+        <CursorPos X="38" Y="23"/>
+        <ExtraEditorCount Value="1"/>
+        <ExtraEditor1>
+          <EditorIndex Value="-1"/>
+          <WindowIndex Value="-1"/>
+          <TopLine Value="-1"/>
+          <CursorPos X="-1" Y="-1"/>
+        </ExtraEditor1>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hctypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="80" Y="11"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hceffects.pas"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="117"/>
+        <CursorPos X="10" Y="103"/>
+        <UsageCount Value="213"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitformnewimage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormNewImage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitFormNewImage"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="90"/>
+        <CursorPos X="7" Y="126"/>
+        <UsageCount Value="208"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hcslider.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="38" Y="16"/>
+        <UsageCount Value="86"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="fill.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="12"/>
+        <CursorPos Y="46"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitformmain.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <UsageCount Value="18"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\config_lazarus\onlinepackagemanager\packages\ct4laz\pl_components\pl_graphics32\source\GR32.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2602"/>
+        <CursorPos Y="2623"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6482"/>
+        <CursorPos Y="6489"/>
+        <UsageCount Value="36"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\canvas.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1581"/>
+        <CursorPos Y="1593"/>
+        <UsageCount Value="59"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\hc\.lazarus\onlinepackagemanager\packages\ct4laz\pl_components\pl_graphics32\source\GR32_RangeBars.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="39" Y="691"/>
+        <UsageCount Value="1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\gr32_rangebars.pas"/>
+        <UnitName Value="GR32_RangeBars"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1953"/>
+        <CursorPos X="5" Y="1974"/>
+        <UsageCount Value="14"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\xgr32_controls.pas"/>
+        <UnitName Value="XGR32_Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="323"/>
+        <CursorPos X="25" Y="328"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\xgr32_stdctrls.pas"/>
+        <UnitName Value="XGR32_StdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="226"/>
+        <CursorPos X="15" Y="244"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\config_lazarus\onlinepackagemanager\packages\ct4laz\pl_components\pl_graphics32\pl_graphics32.pas"/>
+        <UnitName Value="pl_Graphics32"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\config_lazarus\onlinepackagemanager\packages\ct4laz\pl_components\pl_graphics32\source\GR32_RangeBars.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="669"/>
+        <CursorPos X="27" Y="680"/>
+        <UsageCount Value="3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.BigEndian.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Blend.Assembler.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Blend.MMX.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Blend.Pascal.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Blend.SSE2.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="30"/>
+        <CursorPos X="3" Y="43"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Blur.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Blur.RecursiveGaussian.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Blur.SelectiveGaussian.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.CPUID.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Examples.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.BMP.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.Default.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.GIF.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.JPG.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.PNG.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.PNG32.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.PSD.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.PSD.Types.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.PSD.Writer.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.SVG.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.TBitmap.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.TClipboard.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.TGraphic.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.TIcon.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.TMetaFile.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.TPicture.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.ImageFormats.TWICImage.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Math.Complex.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Noise.Simplex.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32.Transpose.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="232"/>
+        <CursorPos X="28" Y="232"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_ArrowHeads.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Backends.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Backends_Generic.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Backends_LCL_Carbon.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Backends_LCL_CustomDrawn.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Backends_LCL_Gtk.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Backends_LCL_Win.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Backends_VCL.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Bindings.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Blend.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Blurs.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Brushes.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Clipboard.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Clipper.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Clipper1.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Clipper2.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_ColorGradients.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_ColorPicker.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_ColorSwatch.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Compiler.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Containers.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_ExtImage.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Filters.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Gamma.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Geometry.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Image.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Layers.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2443"/>
+        <CursorPos X="34" Y="2457"/>
+        <UsageCount Value="14"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_LowLevel.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Math.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Math_FPC.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_MicroTiles.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_OrdinalMaps.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Paths.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Png.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_PngCompilerSwitches.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Polygons.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_PolygonsAggLite.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_PortableNetworkGraphic.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_RangeBars.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Rasterizers.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_RepaintOpt.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Resamplers.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_System.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Text_LCL_Win.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Text_VCL.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Text_VCL_D2D.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_Transforms.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_VectorMaps.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_VectorUtils.Angus.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_VectorUtils.Clipper2.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_VectorUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_VectorUtils.Reference.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_VPR.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_VPR2.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\GR32_XPThemes.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\xgr32_controls.pas"/>
+        <UnitName Value="XGR32_Controls"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\xgr32_stdctrls.pas"/>
+        <UnitName Value="XGR32_StdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\amEasing.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Clipper.Core.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Clipper.Engine.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Clipper.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Clipper.Minkowski.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Clipper.Offset.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Clipper.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Clipper.RectClip.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Packages\Lazarus\GR32_DSGN_Lazarus.lpk"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Packages\Lazarus\GR32_DSGN_Lazarus.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Packages\Lazarus\GR32_Lazarus.lpk"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Packages\Lazarus\GR32_Lazarus.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4312"/>
+        <CursorPos Y="4323"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1499"/>
+        <CursorPos X="14" Y="1507"/>
+        <UsageCount Value="3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="graphics32\Source\Design\GR32.Design.Reg.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="42"/>
+        <CursorPos X="3" Y="54"/>
+        <UsageCount Value="3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\fpimagebitmap.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="130"/>
+        <CursorPos Y="141"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hccolorbox2.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="8"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\ccr\codebot\source\codebot\codebot.text.xml.windows.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6"/>
+        <CursorPos X="11" Y="15"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\packages\fcl-image\src\fpcanvas.pp"/>
+        <UnitName Value="FPCanvas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="368"/>
+        <CursorPos X="15" Y="375"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos X="3" Y="59"/>
+        <UsageCount Value="26"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcuptrunk\lazarus\components\lazutils\graphtype.pp"/>
+        <UnitName Value="GraphType"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="3" Y="44"/>
+        <UsageCount Value="26"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\packages\rtl-objpas\src\inc\system.uitypes.pp"/>
+        <UnitName Value="System.UITypes"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="33"/>
+        <CursorPos X="5" Y="26"/>
+        <UsageCount Value="26"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\rtl\objpas\math.pp"/>
+        <UnitName Value="Math"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="198"/>
+        <CursorPos X="63" Y="204"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\hc\fpcupdeluxe\fpcsrc\rtl\objpas\math.pp"/>
+        <UnitName Value="Math"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2042"/>
+        <CursorPos X="12" Y="2056"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="1107"/>
+        <CursorPos X="15" Y="1125"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\canvas.inc"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="1026"/>
+        <CursorPos X="15" Y="1038"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\winapih.inc"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="87"/>
+        <CursorPos X="14" Y="105"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\intfbasewinapi.inc"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="904"/>
+        <CursorPos X="3" Y="912"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <UnitName Value="FPCanvas"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="428"/>
+        <CursorPos Y="442"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.inc"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="714"/>
+        <CursorPos X="43" Y="722"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcdrawh.inc"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="44"/>
+        <CursorPos X="11" Y="46"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="unitformmain.pas"/>
+        <Caret Line="614" Column="30" TopLine="547"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformmain.pas"/>
+        <Caret Line="320" Column="27" TopLine="307"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformmain.pas"/>
+        <Caret Line="240" Column="4" TopLine="231"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformmain.pas"/>
+        <Caret Line="560" Column="45" TopLine="550"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformmain.pas"/>
+        <Caret Line="555" Column="34" TopLine="546"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformmain.pas"/>
+        <Caret Line="611" Column="35" TopLine="595"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformmain.pas"/>
+        <Caret Line="606" Column="6" TopLine="599"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformmain.pas"/>
+        <Caret Line="240" Column="4" TopLine="231"/>
+      </Position>
+      <Position>
+        <Filename Value="fill.pas"/>
+        <Caret Line="33" Column="84" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <Caret Line="1125" Column="15" TopLine="1111"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\lcl\include\canvas.inc"/>
+        <Caret Line="1038" Column="15" TopLine="1026"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\lcl\include\winapih.inc"/>
+        <Caret Line="105" Column="14" TopLine="87"/>
+      </Position>
+      <Position>
+        <Filename Value="fill.pas"/>
+        <Caret Line="33" Column="84" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <Caret Line="1125" Column="15" TopLine="1107"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Caret Line="363" Column="22" TopLine="348"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.inc"/>
+        <Caret Line="724" Column="12" TopLine="717"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Caret Line="440" Column="24" TopLine="420"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcdrawh.inc"/>
+        <Caret Line="46" Column="14" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.inc"/>
+        <Caret Line="722" Column="43" TopLine="714"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Caret Line="446" Column="22" TopLine="422"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Caret Line="440" Column="24" TopLine="431"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcdrawh.inc"/>
+        <Caret Line="46" Column="14" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Caret Line="440" Column="24" TopLine="422"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcdrawh.inc"/>
+        <Caret Line="46" Column="11" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Caret Line="446" Column="26" TopLine="428"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Caret Line="437" Column="36" TopLine="428"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Caret Line="163" Column="3" TopLine="145"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Caret Line="242" Column="27" TopLine="253"/>
+      </Position>
+      <Position>
+        <Filename Value="fill.pas"/>
+        <Caret Line="33" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="fill.pas"/>
+        <Caret Line="34" TopLine="12"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <Line Value="440"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="fill.pas"/>
+        <Line Value="33"/>
+      </Item>
+    </BreakPoints>
+    <Watches>
+      <Item>
+        <Expression Value="Bitmap"/>
+      </Item>
+      <Item>
+        <Expression Value="_radius"/>
+      </Item>
+      <Item>
+        <Expression Value="FormMain.FlowPanel1.ControlCount"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

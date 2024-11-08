@@ -1,0 +1,106 @@
+object FormNewImage: TFormNewImage
+  Left = 350
+  Height = 283
+  Top = 250
+  Width = 320
+  Caption = 'FormNewImage'
+  ClientHeight = 283
+  ClientWidth = 320
+  OnCreate = FormCreate
+  object ComboBoxResolutions: TComboBox
+    Left = 80
+    Height = 23
+    Top = 55
+    Width = 192
+    ItemHeight = 15
+    Items.Strings = (
+      ''
+    )
+    TabOrder = 0
+    Text = 'ComboBoxResolutions'
+  end
+  object GroupBox1: TGroupBox
+    Left = 79
+    Height = 105
+    Top = 96
+    Width = 193
+    Caption = 'GroupBox1'
+    ClientHeight = 85
+    ClientWidth = 189
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 20
+      Height = 15
+      Top = 18
+      Width = 32
+      Caption = 'Width'
+    end
+    object Label2: TLabel
+      Left = 20
+      Height = 15
+      Top = 56
+      Width = 36
+      Caption = 'Height'
+    end
+    object EditWidth: TEdit
+      Left = 88
+      Height = 23
+      Top = 8
+      Width = 80
+      TabOrder = 0
+      Text = '0'
+    end
+    object EditHeight: TEdit
+      Left = 88
+      Height = 23
+      Top = 48
+      Width = 80
+      TabOrder = 1
+      Text = '0'
+    end
+  end
+  object RadioButton_Size: TRadioButton
+    Left = 8
+    Height = 19
+    Top = 56
+    Width = 38
+    Caption = 'Size'
+    Checked = True
+    TabOrder = 2
+    TabStop = True
+  end
+  object RadioButton_Custom: TRadioButton
+    Left = 8
+    Height = 19
+    Top = 112
+    Width = 60
+    Caption = 'Custom'
+    TabOrder = 3
+  end
+  object Label_NewImageSize: TLabel
+    Left = 128
+    Height = 15
+    Top = 22
+    Width = 83
+    Caption = 'New Image Size'
+  end
+  object ButtonOK: TButton
+    Left = 49
+    Height = 25
+    Top = 229
+    Width = 75
+    Caption = 'OK'
+    ModalResult = 1
+    TabOrder = 4
+    OnClick = ButtonOKClick
+  end
+  object ButtonCancel: TButton
+    Left = 215
+    Height = 25
+    Top = 229
+    Width = 75
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 5
+  end
+end

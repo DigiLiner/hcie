@@ -1,0 +1,43 @@
+unit hcGlobals;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, ExtCtrls, Controls, Graphics, hctypes;
+
+var
+  oldX: integer; //Mouse X old
+  oldy: integer;
+
+  hcShift: TShiftState;
+  PX, PY: integer;
+  mouseButton: hcMouseButton;
+  hMouseEvent: integer;
+  foreColor, backColor: TColor;
+  hctool: TToolType;
+  zoomFactor: single;
+  animrun: boolean; // Çok gerekli değil test için
+  penWidth: integer;
+
+const
+  hMouseDown = 1281101;
+  hMouseMove = 1281102;
+  hMouseUp = 1281103;
+
+
+
+  // HC12 function Color32toColor (TColor32: TColor32): TColor;
+implementation
+
+//HC12
+//TColor32  to TColor Conversion
+{
+function Color32toColor (TColor32: TColor32): TColor;
+begin
+result := RGBToColor(RedComponent(TColor32),
+      GreenComponent(TColor32), BlueComponent(TColor32));
+end;
+}
+end.

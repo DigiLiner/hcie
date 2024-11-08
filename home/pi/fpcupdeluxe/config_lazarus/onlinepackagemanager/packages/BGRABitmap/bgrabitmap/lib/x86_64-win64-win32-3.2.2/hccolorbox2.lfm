@@ -1,0 +1,33 @@
+object HcColorFrame: THcColorFrame
+  Left = 0
+  Height = 253
+  Top = 0
+  Width = 207
+  ClientHeight = 253
+  ClientWidth = 207
+  ParentBackground = False
+  TabOrder = 0
+  DesignLeft = 150
+  DesignTop = 620
+  object ImageColorBox: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 253
+    Top = 0
+    Width = 207
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSize = True
+    OnMouseUp = ImageColorBoxMouseUp
+    OnPaint = ImageColorBoxPaint
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 32
+    Top = 229
+  end
+end

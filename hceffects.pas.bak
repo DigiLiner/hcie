@@ -1,0 +1,76 @@
+unit hceffects;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+{$IFDEF UNIX}
+ cthreads,
+ {$ENDIF}
+ {$IFDEF HASAMIGA}
+ athreads,
+ {$ENDIF}
+
+  BGRABitmap, BGRABitmapTypes,
+  Classes, SysUtils,Forms,ExtCtrls, Controls, Graphics, Dialogs, LCLIntf;
+
+function ApplyBlurEffect(Image: TImage):TImage;
+function Pixelate(_image:TImage ; BlockSize: Integer):TImage;
+function GetRed(Color: TColor): Byte;
+function GetGreen(Color: TColor): Byte;
+function GetBlue(Color: TColor): Byte;
+
+implementation
+
+function GetRed(Color: TColor): Byte;
+begin
+  Result := (Color and $FF);
+end;
+
+function GetGreen(Color: TColor): Byte;
+begin
+  Result := (Color shr 8) and $FF;
+end;
+
+function GetBlue(Color: TColor): Byte;
+begin
+  Result := (Color shr 16) and $FF;
+end;
+
+
+
+ function ApplyBlurEffect(Image: TImage):TImage;
+ var
+   Bitmap: TBGRABitmap;
+ begin
+   Bitmap := TBGRABitmap.Create(Image.Picture.Bitmap);
+   try
+    Bitmap:= Bitmap.FilterBlurRadial(5,5,TRadialBlurType.rbBox); // Blur radius, you can adjust this value
+     //Image.Picture.Bitmap.Assign(Bitmap);
+     Image.Canvas.Draw(0,0,Bitmap.Bitmap);
+   finally
+     Result:=Image;
+     Bitmap.Free;
+   end;
+ end;
+
+
+function Pixelate(_image:TImage ; BlockSize: Integer):TImage;
+var
+  Bitmap: TBGRABitmap;
+begin
+  Bitmap := TBGRABitmap.Create(_image);
+  try
+   Bitmap:= Bitmap.FilterPixelate(5,False,TResampleFilter.rfLinear,false); //
+    //Image.Picture.Bitmap.Assign(Bitmap);
+    _image.Canvas.Draw(0,0,Bitmap.Bitmap);
+  finally
+    Result:=_image;
+    Bitmap.Free;
+    _image.Free;
+  end;
+end;
+
+end.
+

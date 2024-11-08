@@ -1,0 +1,75 @@
+unit circle;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, Forms, ExtCtrls, Controls, Graphics, hctypes, hcGlobals,
+  Math;
+
+var
+  x1, y1, x2, y2, i: integer;
+  _radius: single;
+
+procedure hc_ellipse1(Image1, Image2: TImage; Button: hcMouseButton;
+  Shift: TShiftState; PX, PY: integer; mEvent: integer // 1:Down,2:Move:3:Up);
+  );
+
+implementation
+
+
+procedure hc_ellipse1(image1, Image2: TImage; Button: hcMouseButton;
+  Shift: TShiftState; PX, PY: integer; mEvent: integer // 1:Down,2:Move:3:Up);
+  );
+begin
+
+  if (hmouseButton = mbLeft) and (mEvent = hMouseDown) then    //DOWN
+  begin
+    Image2.Canvas.Draw(0, 0, Image1.Picture.Graphic);
+    x1 := px;
+    y1 := py;
+    _radius := 0;
+    oldx := px;
+    oldy := py;
+    image1.Canvas.Brush.Color:=clNone;
+  end
+  else if (hmouseButton = mbLeft) and (mEvent = hMouseMove) then    //MOVE
+  begin
+
+    Image1.Canvas.Draw(0, 0, Image2.Picture.Graphic);
+    Image1.Canvas.Ellipse(oldX, oldy, px, py);
+   // image1.Picture.Bitmap.Canvas.Ellipse(oldX, oldy, px, py);
+    {
+   Image1.canvas.Draw(0, 0, Image2.picture.bitmap);
+   _radius := Sqrt(Sqr(PX - oldx) + Sqr(PY - oldy));
+    for i := 0 to 360 do
+    begin
+     // if (i mod 10) = 1 then
+      if true then
+      begin
+        x2 := x1;
+        y2 := y1;
+        x1 := Round(_radius * Cos(DegToRad(i))) + oldx; // Calculate X
+        y1 := Round(_radius * Sin(DegToRad(i))) + oldy; // Calculate Y
+
+        if (((x1>=0) and (x1<=image1.Picture.Bitmap.Width)) and
+        ((x2>=0) and (x2<= image1.Picture.Bitmap.Width)) and
+        ((y1>=0) and (y1<= image1.Picture.Bitmap.Height)) and
+         ((y2>=0) and (y2<= image1.Picture.Bitmap.Height )))
+        then
+        begin
+
+            Image1.canvas.line(x1, y1, x2, y2);
+        end;
+        }
+  end
+
+  else if (hmouseButton = mbLeft) and (mEvent = hMouseUp) then   //UP
+  begin
+    Image2.Canvas.Draw(0, 0, Image1.Picture.Graphic);
+  end;
+
+end;
+
+end.

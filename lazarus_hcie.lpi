@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="lazarus_hcie"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+    </General>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+      <Item Name="Amiga">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetProcessor Value="68020"/>
+            <TargetCPU Value="m68k"/>
+            <TargetOS Value="amiga"/>
+            <Optimizations>
+              <OptimizationLevel Value="4"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf3"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="AROS">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="aros"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="MorphOS">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="powerpc"/>
+            <TargetOS Value="morphos"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="AmigaOS4">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="powerpc"/>
+            <TargetOS Value="amiga"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="Linux-ARM">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="arm"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="4"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf3"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="Linux-x68-64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <Libraries Value="graphics32/Source/Packages"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf3"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="Windows 64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="Windows 32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="4"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <RunWithoutDebug Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="Darwin-i386">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="darwin"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <RunWithoutDebug Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="MacOS-PowePC64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="powerpc64"/>
+            <TargetOS Value="macos"/>
+            <Optimizations>
+              <OptimizationLevel Value="4"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <RunWithoutDebug Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="MacOS-x86_64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);graphics32/Source"/>
+            <OtherUnitFiles Value="graphics32/Source;graphics32/Source/Packages/Lazarus"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="macos"/>
+            <Optimizations>
+              <OptimizationLevel Value="4"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <RunWithoutDebug Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <SharedMatrixOptions Count="1">
+        <Item1 ID="046759475021" Type="IDEMacro" MacroName="LCLWidgetType" Value="mui"/>
+      </SharedMatrixOptions>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="mbColorLibLaz"/>
+      </Item>
+      <Item>
+        <PackageName Value="bgrapascalscriptcomponent"/>
+      </Item>
+      <Item>
+        <PackageName Value="bgracontrols"/>
+      </Item>
+      <Item>
+        <PackageName Value="BGRABitmapPack"/>
+      </Item>
+      <Item>
+        <PackageName Value="AnchorDocking"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="lazarus_hcie.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitformmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitFormMain"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hccolorbox2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="HcColorFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit>
+      <Unit>
+        <Filename Value="line.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hcglobals.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="hcGlobals"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pen.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="animation.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="circle.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hctypes.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hceffects.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitformnewimage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormNewImage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitFormNewImage"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hcslider.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="fill.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitcanvassizedialog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormSetCanvasSize"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitCanvasSizeDialog"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitformdocument.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormDocument"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Checks>
+        <IOChecks Value="True"/>
+        <OverflowChecks Value="True"/>
+        <StackChecks Value="True"/>
+      </Checks>
+      <Optimizations>
+        <OptimizationLevel Value="4"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf3"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <Verbosity>
+        <ShowNotes Value="False"/>
+        <ShowHints Value="False"/>
+        <ShowCompProc Value="True"/>
+        <ShowHintsForSenderNotUsed Value="True"/>
+      </Verbosity>
+      <OtherDefines Count="1">
+        <Define0 Value="GR32"/>
+      </OtherDefines>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

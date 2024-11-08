@@ -1,0 +1,182 @@
+object Frame1: TFrame1
+  Left = 0
+  Height = 173
+  Top = 0
+  Width = 163
+  ClientHeight = 173
+  ClientWidth = 163
+  ParentBackground = False
+  TabOrder = 0
+  DesignLeft = 349
+  DesignTop = 27
+  object FlowPanel1: TFlowPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 1
+    Height = 171
+    Top = 1
+    Width = 161
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 1
+    Caption = 'HC ColorBox'
+    Color = clForm
+    ControlList = <    
+      item
+        Control = Label3
+        WrapAfter = waAuto
+        Index = 0
+      end    
+      item
+        Control = Label4
+        WrapAfter = waAuto
+        Index = 1
+      end    
+      item
+        Control = Label6
+        WrapAfter = waAuto
+        Index = 2
+      end    
+      item
+        Control = Label7
+        WrapAfter = waAuto
+        Index = 3
+      end    
+      item
+        Control = Label5
+        WrapAfter = waAuto
+        Index = 4
+      end    
+      item
+        Control = Label8
+        WrapAfter = waAuto
+        Index = 5
+      end    
+      item
+        Control = Label9
+        WrapAfter = waAuto
+        Index = 6
+      end    
+      item
+        Control = Label10
+        WrapAfter = waAuto
+        Index = 7
+      end    
+      item
+        Control = Label11
+        WrapAfter = waAuto
+        Index = 8
+      end>
+    FlowLayout = tlTop
+    FlowStyle = fsLeftRightTopBottom
+    ParentColor = False
+    TabOrder = 0
+    object Label3: TLabel
+      Left = 3
+      Height = 16
+      Top = 3
+      Width = 16
+      Anchors = []
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Color = clWhite
+      ParentColor = False
+      Transparent = False
+    end
+    object Label4: TLabel
+      Left = 23
+      Height = 16
+      Top = 3
+      Width = 16
+      Anchors = []
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Color = 12632319
+      ParentColor = False
+      Transparent = False
+    end
+    object Label6: TLabel
+      Left = 43
+      Height = 16
+      Top = 3
+      Width = 16
+      Anchors = []
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Color = 12640511
+      ParentColor = False
+      Transparent = False
+    end
+    object Label7: TLabel
+      Left = 63
+      Height = 16
+      Top = 3
+      Width = 16
+      Anchors = []
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Color = 12648447
+      ParentColor = False
+      Transparent = False
+    end
+    object Label8: TLabel
+      Left = 103
+      Height = 16
+      Top = 3
+      Width = 16
+      Anchors = []
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Color = 8421631
+      ParentColor = False
+      Transparent = False
+    end
+    object Label9: TLabel
+      Left = 123
+      Height = 16
+      Top = 3
+      Width = 16
+      Anchors = []
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Color = 8421631
+      ParentColor = False
+      Transparent = False
+    end
+    object Label10: TLabel
+      Left = 3
+      Height = 16
+      Top = 23
+      Width = 16
+      Anchors = []
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Color = 8421631
+      ParentColor = False
+      Transparent = False
+    end
+    object Label11: TLabel
+      Left = 21
+      Height = 1
+      Top = 21
+      Width = 1
+      Anchors = []
+      Transparent = False
+    end
+    object Label5: TLabel
+      Left = 83
+      Height = 16
+      Top = 3
+      Width = 16
+      Anchors = []
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Color = 8421631
+      ParentColor = False
+      Transparent = False
+    end
+  end
+end

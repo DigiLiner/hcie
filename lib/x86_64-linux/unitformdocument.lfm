@@ -1,0 +1,100 @@
+object FormDocument: TFormDocument
+  Left = 342
+  Height = 387
+  Top = 250
+  Width = 745
+  Align = alClient
+  Caption = 'FormDocument'
+  ClientHeight = 387
+  ClientWidth = 745
+  FormStyle = fsMDIChild
+  OnCreate = FormCreate
+  OnShow = FormShow
+  object MainPanel: TPanel
+    Left = 0
+    Height = 440
+    Top = 0
+    Width = 274
+    Caption = 'MainPanel'
+    ClientHeight = 440
+    ClientWidth = 274
+    TabOrder = 0
+    OnClick = MainPanelClick
+    object ScrollBox1: TScrollBox
+      Left = -89
+      Height = 181
+      Top = 180
+      Width = 278
+      HorzScrollBar.Increment = 20
+      HorzScrollBar.Page = 274
+      VertScrollBar.Increment = 21
+      VertScrollBar.Page = 177
+      Anchors = []
+      AutoSize = True
+      ClientHeight = 177
+      ClientWidth = 274
+      Color = clAppWorkspace
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 0
+      OnClick = ScrollBox1Click
+      OnResize = ScrollBox1Resize
+      object Panel1: TPanel
+        Left = 0
+        Height = 177
+        Top = 0
+        Width = 274
+        Caption = 'Panel1'
+        ClientHeight = 177
+        ClientWidth = 274
+        ParentBackground = False
+        TabOrder = 0
+        object Image1: TImage
+          Left = 56
+          Height = 168
+          Top = 24
+          Width = 151
+          AntialiasingMode = amOn
+          Align = alCustom
+          Anchors = []
+          KeepOriginXWhenClipped = True
+          KeepOriginYWhenClipped = True
+          Proportional = True
+          Stretch = True
+          OnMouseDown = Image1MouseDown
+          OnMouseMove = Image1MouseMove
+          OnMouseUp = Image1MouseUp
+          OnMouseWheelDown = Image1MouseWheelDown
+          OnMouseWheelUp = Image1MouseWheelUp
+          OnResize = Image1Resize
+        end
+      end
+      object StatusBar1: TStatusBar
+        Left = 0
+        Height = 23
+        Top = 154
+        Width = 274
+        Panels = <        
+          item
+            Text = 'Coords XY'
+            Width = 50
+          end>
+        SimplePanel = False
+      end
+    end
+  end
+  object Image2: TImage
+    Left = 336
+    Height = 50
+    Top = 24
+    Width = 50
+    AntialiasingMode = amOn
+    StretchOutEnabled = False
+    StretchInEnabled = False
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 550
+    Top = 130
+  end
+end
