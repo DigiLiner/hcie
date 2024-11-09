@@ -1,39 +1,39 @@
 object FormDocument: TFormDocument
-  Left = 342
-  Height = 387
-  Top = 250
-  Width = 745
-  Align = alClient
+  Left = 0
+  Height = 300
+  Top = 0
+  Width = 400
   BorderStyle = bsNone
   Caption = 'FormDocument'
-  ClientHeight = 387
-  ClientWidth = 745
-  FormStyle = fsMDIChild
+  ClientHeight = 300
+  ClientWidth = 400
+  Constraints.MaxHeight = 300
+  Constraints.MaxWidth = 400
   OnCreate = FormCreate
   OnShow = FormShow
   object MainPanel: TPanel
     Left = 0
-    Height = 440
+    Height = 208
     Top = 0
     Width = 274
     Caption = 'MainPanel'
-    ClientHeight = 440
+    ClientHeight = 208
     ClientWidth = 274
     TabOrder = 0
     OnClick = MainPanelClick
     object ScrollBox1: TScrollBox
       Left = -89
-      Height = 181
-      Top = 180
+      Height = 176
+      Top = 40
       Width = 278
       HorzScrollBar.Increment = 20
       HorzScrollBar.Page = 274
       VertScrollBar.Increment = 21
-      VertScrollBar.Page = 177
+      VertScrollBar.Page = 172
       Anchors = []
       AutoSize = True
-      ClientHeight = 160
-      ClientWidth = 257
+      ClientHeight = 172
+      ClientWidth = 274
       Color = clAppWorkspace
       ParentBackground = False
       ParentColor = False
@@ -42,11 +42,11 @@ object FormDocument: TFormDocument
       OnResize = ScrollBox1Resize
       object Panel1: TPanel
         Left = 0
-        Height = 177
+        Height = 172
         Top = 0
         Width = 274
         Caption = 'Panel1'
-        ClientHeight = 177
+        ClientHeight = 172
         ClientWidth = 274
         ParentBackground = False
         TabOrder = 0
@@ -60,31 +60,33 @@ object FormDocument: TFormDocument
           Anchors = []
           KeepOriginXWhenClipped = True
           KeepOriginYWhenClipped = True
-          Proportional = True
-          Stretch = True
           OnClick = Image1Click
           OnMouseDown = Image1MouseDown
           OnMouseMove = Image1MouseMove
           OnMouseUp = Image1MouseUp
           OnMouseWheelDown = Image1MouseWheelDown
           OnMouseWheelUp = Image1MouseWheelUp
+          OnPaint = Image1Paint
           OnResize = Image1Resize
+          Proportional = True
+          Stretch = True
         end
       end
     end
   end
   object Image2: TImage
-    Left = 336
+    Left = 288
     Height = 50
-    Top = 24
+    Top = 40
     Width = 50
     AntialiasingMode = amOn
     StretchOutEnabled = False
     StretchInEnabled = False
   end
   object Timer1: TTimer
+    Interval = 10
     OnTimer = Timer1Timer
-    Left = 550
-    Top = 130
+    Left = 304
+    Top = 112
   end
 end

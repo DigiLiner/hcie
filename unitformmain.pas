@@ -8,7 +8,7 @@ uses
   {$IFDEF HASAMIGA}
  athreads, hcamigaeffects,
   {$Else}
-  BGRAGraphicControl, hceffects,
+  BGRAGraphicControl, CustomDrawnControls, hceffects,
   {$ENDIF}
   {$IFDEF WINDOWS}
   Windows,Registry,
@@ -28,6 +28,24 @@ uses
 
 type
 
+  {$IFDEF WINDOWS}
+  { TPageControl }
+  TPageControl = class(ComCtrls.TPageControl)
+  private
+
+
+  protected
+    procedure MouseDown(Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer); override;
+    procedure PaintWindow(DC: HDC); override;
+  var
+   const btnSize = 10;
+   const xoff   =-2;
+   const  yoff =5;
+  end;
+  {$ENDIF}
+
+
   { TFormMain }
 
   TFormMain = class(TForm)
@@ -44,8 +62,10 @@ type
     FlowPanel1: TPanel;
     FontDialog1: TFontDialog;
     HexaColorPicker1: THexaColorPicker;
+    IdleTimer1: TIdleTimer;
 
     ImageList1: TImageList;
+    ImageList2: TImageList;
     ImageRadius: TImage;
     ImageTransparency: TImage;
     ImageWidth: TImage;
@@ -133,9 +153,11 @@ type
     Separator1: TMenuItem;
     Separator2: TMenuItem;
     Separator3: TMenuItem;
-    StatusBar1:TStatusBar;
+    StatusBar1: TStatusBar;
+    TabSheet1: TTabSheet;
+    Timer1: TTimer;
     TimerStartup: TTimer;
-    TimerStatus:TTimer;
+    TimerStatus: TTimer;
     ToolBarStandard: TToolBar;
     S1: TToolButton;
     S3: TToolButton;
@@ -180,8 +202,10 @@ type
     procedure ImageWidthMouseMove(Sender: TObject; Shift: TShiftState;
       X, Y: integer);
     procedure MenuItemExitClick(Sender: TObject);
+    procedure PageControl1Change(Sender: TObject);
     procedure ScrollBox1Click(Sender: TObject);
-    procedure TimerStatusTimer(Sender:TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure TimerStatusTimer(Sender: TObject);
     procedure ToolButtonFillClick(Sender: TObject);
     procedure ToolButtonNewClick(Sender: TObject);
     procedure ToolButtonBlurClick(Sender: TObject);
@@ -190,6 +214,7 @@ type
     procedure ToolButtonPenClick(Sender: TObject);
     procedure ToolButtonLineClick(Sender: TObject);
     procedure ToolButtonPixelateClick(Sender: TObject);
+    procedure ToolButtonZoomInClick(Sender: TObject);
 
     //In Form procedures End
 
@@ -207,11 +232,83 @@ var
 
 function IsDarkTheme: boolean;
 procedure ApplyTheme(Form: TForm);
-
+function findDocument(docTag: integer): TFormDocument;
 
 implementation
 
 {$R *.lfm}
+
+{$IFDEF WINDOWS}
+procedure TPageControl.MouseDown(Button: TMouseButton; Shift: TShiftState; X,
+  Y: Integer);
+var
+  R : TRect;
+begin
+  inherited MouseDown(Button, Shift, X, Y);
+  if Button = mbLeft then
+  begin
+    R := TabRect(ActivePageIndex);
+   if PtInRect(Classes.Rect(R.Right - btnSize + xoff-3, R.Top + yoff-3,
+                             R.Right +xoff+4, R.Top + btnSize + yoff+4),
+              Classes.Point(X, Y))
+    then ActivePage.Free;
+  end;
+end;
+
+procedure TPageControl.PaintWindow(DC: HDC);
+var
+  i  :integer;
+  R : TRect;
+  bm : TBitmap;
+  Pen: HPEN;
+  OldPen : HPEN;
+  DrawColor: TColor;
+  Red, Green, Blue: Byte;
+
+begin
+  inherited PaintWindow(DC);
+
+  bm := TBitmap.Create;
+  try
+    bm.SetSize(16, 16);
+    Images.GetBitmap(0, bm);
+
+    for i := 0 to Pred(PageCount) do
+    begin
+          R := TabRect(i);
+          // Create a pen with desired thickness (e.g., 5)
+          DrawColor := ColorToRGB(cl3DDkShadow);
+          Red := GetRValue(DrawColor);
+          Green := GetGValue(DrawColor);
+          Blue := GetBValue(DrawColor);
+
+          Pen := CreatePen(PS_SOLID, 1, RGB( red, green, blue)); // 5 is the thickness of the pen
+          OldPen := SelectObject(DC, Pen);
+          Rectangle(DC,R.Right - btnSize+Xoff-3 ,R.Top +yoff -3,
+          R.Right +Xoff +4,r.Top+btnSize +yoff +4 );
+
+          Pen := CreatePen(PS_SOLID, 2, RGB( red, green, blue)); // 5 is the thickness of the pen
+          OldPen := SelectObject(DC, Pen);
+
+          MoveToEx(DC,R.Right - btnSize+Xoff ,R.Top +yoff ,Nil) ;
+          LineTo(DC,R.Right +Xoff ,r.Top+btnSize +yoff)  ;
+          MoveToEx(DC,R.Right - btnSize +Xoff,R.Top + btnsize + yoff,Nil) ;
+          LineTo(DC,R.Right +Xoff ,R.Top +yoff )  ;
+
+
+          //Alternative
+          //     StretchBlt(DC, R.Right - btnSize - 4, R.Top + 2,
+          //       btnSize, btnSize, bm.Canvas.Handle, 0, 0, 16, 16, cmSrcCopy);
+    end;
+  finally
+    bm.Free;
+    FormMain.Timer1.Enabled:=True;
+    SelectObject(DC, OldPen);
+  DeleteObject(Pen);
+  end;
+end;
+{$ENDIF}
+
 
 { TFormMain }
 
@@ -224,15 +321,25 @@ end;
 
 procedure TFormMain.ToolButtonOpenClick(Sender: TObject);
 var
-  myForm: TFormDocument;
+  NewDoc: TFormDocument;
+  NewPage: TTabSheet;
 begin
 
   if OpenPictureDialog1.Execute then
   begin
-    myForm := TFormDocument.Create(Self);
-    myForm.fileName := OpenPictureDialog1.FileName;
-
-    myForm.Show;
+    NewPage := PageControl1.AddTabSheet;
+    NewDoc := TFormDocument.Create(Application);
+    NewDoc.Caption := OpenPictureDialog1.FileName;
+    NewDoc.EmptyImage := False; //Load from File
+    NewDoc.Parent := NewPage;
+    NewDoc.WindowState := wsMaximized;
+    Inc(imageCounter); // Increment last image number
+    NewPage.Caption := OpenPictureDialog1.FileName;
+    NewDoc.Tag := imageCounter;
+    NewDoc.fileName := NewPage.Caption; // Set caption as Filename
+    NewDoc.Show();
+    NewPage.Invalidate;
+    PageControl1.ActivePage := NewPage;
   end;
 
 end;
@@ -251,6 +358,11 @@ end;
 procedure TFormMain.ToolButtonPixelateClick(Sender: TObject);
 begin
 
+end;
+
+procedure TFormMain.ToolButtonZoomInClick(Sender: TObject);
+begin
+  findDocument(5).ZoomIn;
 end;
 
 
@@ -414,11 +526,14 @@ begin
       NewDoc.Caption := 'NewImage';
       NewDoc.EmptyImage := True;
       NewDoc.Parent := NewPage;
-      //NewDoc.WindowState:= wsMaximized;
-      NewPage.Caption:= 'Image' + PageControl1.PageCount.ToString;
-      NewDoc.fileName:= NewPage.Caption; // Dosya adı olarak
+      NewDoc.WindowState := wsMaximized;
+      Inc(imageCounter); // Increment last image number
+      NewPage.Caption := 'Image' + imageCounter.ToString;
+      NewDoc.Tag := imageCounter;
+      NewDoc.fileName := NewPage.Caption; // Set caption as Filename
       NewDoc.Show();
-      PageControl1.ActivePage:=NewPage;
+      NewPage.Invalidate;
+      PageControl1.ActivePage := NewPage;
 
     end;
 
@@ -525,19 +640,59 @@ begin
   self.Close;
 end;
 
+procedure TFormMain.PageControl1Change(Sender: TObject);
+var
+  ActiveDoc: TFormDocument;
+  i: integer;
+  ChildControl: TControl;
+begin
+  for i := 0 to PageControl1.ActivePage.ControlCount - 1 do
+  begin
+    ChildControl := PageControl1.ActivePage.Controls[i];
+    // Burada ChildControl'e istediğiniz işlemi uygulayabilirsiniz
+    if ChildControl is TFormDocument then
+      FormMain.Caption := TFormDocument(ChildControl).FileName;
+  end;
+
+end;
+//Use to active image page
+function findDocument(docTag: integer): TFormDocument;
+var
+  ActiveDoc: TFormDocument;
+  i: integer;
+  ChildControl: TControl;
+begin
+  Result := nil;
+  for i := 0 to FormMain.PageControl1.ActivePage.ControlCount - 1 do
+  begin
+    ChildControl := FormMain.PageControl1.ActivePage.Controls[i];
+    // Burada ChildControl'e istediğiniz işlemi uygulayabilirsiniz
+    if ChildControl is TFormDocument then
+    begin
+      Result := TFormDocument(ChildControl);
+    end;
+  end;
+
+end;
+
 procedure TFormMain.ScrollBox1Click(Sender: TObject);
 begin
 
 end;
 
-procedure TFormMain.TimerStatusTimer(Sender:TObject);
+procedure TFormMain.Timer1Timer(Sender: TObject);
 begin
-if status then
+
+end;
+
+procedure TFormMain.TimerStatusTimer(Sender: TObject);
 begin
-StatusBar1.Panels[0].Text :=statusText;
-status:=false;
-TimerStatus.Enabled:=true;
-end
+  if status then
+  begin
+    StatusBar1.Panels[0].Text := statusText;
+    status := False;
+    TimerStatus.Enabled := True;
+  end;
 end;
 
 

@@ -1,0 +1,4 @@
+Fs
+08.11.2024
+dosyadan resim açıldığında çizim yapılamıyor.
+

@@ -9,7 +9,7 @@ uses
   {$IFDEF HASAMIGA}
   athreads,
   {$ENDIF}
-  Interfaces, // this includes the LCL widgetset
+  customdrawn,Interfaces, // this includes the LCL widgetset
   Forms,  unitFormMain, unitFormNewImage,fill,circle,pen;
   {$R *.res}
 

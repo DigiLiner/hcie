@@ -1,14 +1,14 @@
 object FormDocument: TFormDocument
-  Left = 342
-  Height = 260
-  Top = 250
-  Width = 409
-  Align = alClient
+  Left = 0
+  Height = 300
+  Top = 0
+  Width = 400
   BorderStyle = bsNone
   Caption = 'FormDocument'
-  ClientHeight = 260
-  ClientWidth = 409
-  FormStyle = fsMDIChild
+  ClientHeight = 300
+  ClientWidth = 400
+  Constraints.MaxHeight = 300
+  Constraints.MaxWidth = 400
   OnCreate = FormCreate
   OnShow = FormShow
   object MainPanel: TPanel
@@ -32,7 +32,7 @@ object FormDocument: TFormDocument
       VertScrollBar.Page = 172
       Anchors = []
       AutoSize = True
-      ClientHeight = 155
+      ClientHeight = 172
       ClientWidth = 274
       Color = clAppWorkspace
       ParentBackground = False
@@ -60,15 +60,16 @@ object FormDocument: TFormDocument
           Anchors = []
           KeepOriginXWhenClipped = True
           KeepOriginYWhenClipped = True
-          Proportional = True
-          Stretch = True
           OnClick = Image1Click
           OnMouseDown = Image1MouseDown
           OnMouseMove = Image1MouseMove
           OnMouseUp = Image1MouseUp
           OnMouseWheelDown = Image1MouseWheelDown
           OnMouseWheelUp = Image1MouseWheelUp
+          OnPaint = Image1Paint
           OnResize = Image1Resize
+          Proportional = True
+          Stretch = True
         end
       end
     end

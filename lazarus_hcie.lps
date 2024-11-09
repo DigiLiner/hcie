@@ -9,8 +9,8 @@
       <Unit>
         <Filename Value="lazarus_hcie.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <CursorPos X="57" Y="13"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="57" Y="10"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit>
@@ -21,17 +21,18 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unitFormMain"/>
-        <TopLine Value="396"/>
-        <CursorPos X="40" Y="421"/>
+        <TopLine Value="513"/>
+        <CursorPos X="3" Y="514"/>
+        <FoldState Value=" T7i7E}80"/>
         <SyntaxHighlighter Value="Delphi"/>
         <UsageCount Value="201"/>
         <Bookmarks Count="6">
-          <Item0 Y="217" ID="2"/>
-          <Item1 X="3" Y="507" ID="3"/>
-          <Item2 Y="473" ID="4"/>
-          <Item3 Y="472" ID="7"/>
-          <Item4 Y="545" ID="5"/>
-          <Item5 Y="232" ID="1"/>
+          <Item0 Y="587" ID="7"/>
+          <Item1 Y="700" ID="5"/>
+          <Item2 X="2" Y="655" ID="2"/>
+          <Item3 X="3" Y="514" ID="1"/>
+          <Item4 Y="365" ID="3"/>
+          <Item5 X="8" Y="329" ID="4"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -58,26 +59,29 @@
         <Filename Value="hcglobals.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="hcGlobals"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="13"/>
-        <CursorPos X="65" Y="26"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="4"/>
+        <CursorPos X="5" Y="13"/>
         <UsageCount Value="216"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="pen.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="24"/>
-        <CursorPos Y="6"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="14"/>
+        <CursorPos X="22" Y="30"/>
         <UsageCount Value="215"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="animation.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="23" Y="70"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="45"/>
+        <CursorPos X="9" Y="72"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="circle.pas"/>
@@ -127,14 +131,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="14"/>
         <CursorPos Y="25"/>
-        <UsageCount Value="161"/>
+        <UsageCount Value="177"/>
       </Unit>
       <Unit>
         <Filename Value="fill.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="10" Y="5"/>
-        <UsageCount Value="104"/>
+        <UsageCount Value="120"/>
       </Unit>
       <Unit>
         <Filename Value="unitcanvassizedialog.pas"/>
@@ -146,7 +150,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos X="10" Y="20"/>
-        <UsageCount Value="76"/>
+        <UsageCount Value="92"/>
       </Unit>
       <Unit>
         <Filename Value="unitformdocument.pas"/>
@@ -155,12 +159,21 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="355"/>
-        <CursorPos Y="366"/>
-        <UsageCount Value="33"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="188"/>
+        <CursorPos X="25" Y="200"/>
+        <UsageCount Value="49"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="todo.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="33" Y="4"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
       </Unit>
       <Unit>
         <Filename Value="unit1formdocument.pas"/>
@@ -170,14 +183,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos X="25" Y="28"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="19"/>
       </Unit>
       <Unit>
         <Filename Value="unitformmain.lfm"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="60"/>
         <CursorPos X="60" Y="36"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="32"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -185,21 +198,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2602"/>
         <CursorPos Y="2623"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="36"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\wincontrol.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="4347"/>
         <CursorPos Y="4357"/>
-        <UsageCount Value="35"/>
+        <UsageCount Value="34"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\canvas.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1581"/>
         <CursorPos Y="1593"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="53"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\gr32_rangebars.pas"/>
@@ -207,7 +220,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1953"/>
         <CursorPos X="5" Y="1974"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\xgr32_controls.pas"/>
@@ -215,7 +228,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="323"/>
         <CursorPos X="25" Y="328"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\xgr32_stdctrls.pas"/>
@@ -223,20 +236,20 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="226"/>
         <CursorPos X="15" Y="244"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcupdeluxe\config_lazarus\onlinepackagemanager\packages\ct4laz\pl_components\pl_graphics32\pl_graphics32.pas"/>
         <UnitName Value="pl_Graphics32"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcupdeluxe\config_lazarus\onlinepackagemanager\packages\ct4laz\pl_components\pl_graphics32\source\GR32_RangeBars.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="669"/>
         <CursorPos X="27" Y="680"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.BigEndian.pas"/>
@@ -244,7 +257,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Blend.Assembler.pas"/>
@@ -252,7 +265,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Blend.MMX.pas"/>
@@ -260,7 +273,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Blend.Pascal.pas"/>
@@ -268,14 +281,14 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Blend.SSE2.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="30"/>
         <CursorPos X="3" Y="43"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Blur.pas"/>
@@ -283,7 +296,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Blur.RecursiveGaussian.pas"/>
@@ -291,7 +304,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Blur.SelectiveGaussian.pas"/>
@@ -299,7 +312,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.CPUID.pas"/>
@@ -307,7 +320,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Examples.pas"/>
@@ -315,7 +328,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.BMP.pas"/>
@@ -323,7 +336,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.Default.pas"/>
@@ -331,7 +344,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.GIF.pas"/>
@@ -339,7 +352,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.JPG.pas"/>
@@ -347,7 +360,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.pas"/>
@@ -355,7 +368,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.PNG.pas"/>
@@ -363,7 +376,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.PNG32.pas"/>
@@ -371,7 +384,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.PSD.pas"/>
@@ -379,7 +392,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.PSD.Types.pas"/>
@@ -387,7 +400,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.PSD.Writer.pas"/>
@@ -395,7 +408,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.SVG.pas"/>
@@ -403,7 +416,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.TBitmap.pas"/>
@@ -411,7 +424,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.TClipboard.pas"/>
@@ -419,7 +432,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.TGraphic.pas"/>
@@ -427,7 +440,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.TIcon.pas"/>
@@ -435,7 +448,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.TMetaFile.pas"/>
@@ -443,7 +456,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.TPicture.pas"/>
@@ -451,7 +464,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.ImageFormats.TWICImage.pas"/>
@@ -459,13 +472,13 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Math.Complex.pas"/>
@@ -473,7 +486,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Noise.Simplex.pas"/>
@@ -481,20 +494,20 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32.Transpose.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="232"/>
         <CursorPos X="28" Y="232"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_ArrowHeads.pas"/>
@@ -502,7 +515,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Backends.pas"/>
@@ -510,7 +523,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Backends_Generic.pas"/>
@@ -518,7 +531,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Backends_LCL_Carbon.pas"/>
@@ -526,7 +539,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Backends_LCL_CustomDrawn.pas"/>
@@ -534,7 +547,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Backends_LCL_Gtk.pas"/>
@@ -542,7 +555,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Backends_LCL_Win.pas"/>
@@ -550,7 +563,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Backends_VCL.pas"/>
@@ -558,7 +571,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Bindings.pas"/>
@@ -566,7 +579,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Blend.pas"/>
@@ -574,7 +587,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Blurs.pas"/>
@@ -582,7 +595,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Brushes.pas"/>
@@ -590,7 +603,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Clipboard.pas"/>
@@ -598,7 +611,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Clipper.pas"/>
@@ -606,7 +619,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Clipper1.pas"/>
@@ -614,7 +627,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Clipper2.pas"/>
@@ -622,7 +635,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_ColorGradients.pas"/>
@@ -630,7 +643,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_ColorPicker.pas"/>
@@ -638,7 +651,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_ColorSwatch.pas"/>
@@ -646,7 +659,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Compiler.inc"/>
@@ -654,7 +667,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Containers.pas"/>
@@ -662,7 +675,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_ExtImage.pas"/>
@@ -670,7 +683,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Filters.pas"/>
@@ -678,7 +691,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Gamma.pas"/>
@@ -686,7 +699,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Geometry.pas"/>
@@ -694,7 +707,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Image.pas"/>
@@ -702,14 +715,14 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Layers.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2443"/>
         <CursorPos X="34" Y="2457"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_LowLevel.pas"/>
@@ -717,7 +730,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Math.pas"/>
@@ -725,7 +738,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Math_FPC.pas"/>
@@ -733,7 +746,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_MicroTiles.pas"/>
@@ -741,7 +754,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_OrdinalMaps.pas"/>
@@ -749,7 +762,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Paths.pas"/>
@@ -757,7 +770,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Png.pas"/>
@@ -765,7 +778,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_PngCompilerSwitches.inc"/>
@@ -773,7 +786,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Polygons.pas"/>
@@ -781,7 +794,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_PolygonsAggLite.pas"/>
@@ -789,7 +802,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_PortableNetworkGraphic.pas"/>
@@ -797,7 +810,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_RangeBars.pas"/>
@@ -805,7 +818,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Rasterizers.pas"/>
@@ -813,7 +826,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_RepaintOpt.pas"/>
@@ -821,7 +834,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Resamplers.pas"/>
@@ -829,7 +842,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_System.pas"/>
@@ -837,7 +850,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Text_LCL_Win.pas"/>
@@ -845,7 +858,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Text_VCL.pas"/>
@@ -853,7 +866,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Text_VCL_D2D.pas"/>
@@ -861,7 +874,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_Transforms.pas"/>
@@ -869,7 +882,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_VectorMaps.pas"/>
@@ -877,7 +890,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_VectorUtils.Angus.pas"/>
@@ -885,7 +898,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_VectorUtils.Clipper2.pas"/>
@@ -893,7 +906,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_VectorUtils.pas"/>
@@ -901,7 +914,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_VectorUtils.Reference.pas"/>
@@ -909,7 +922,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_VPR.pas"/>
@@ -917,7 +930,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_VPR2.pas"/>
@@ -925,7 +938,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\GR32_XPThemes.pas"/>
@@ -933,7 +946,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\xgr32_controls.pas"/>
@@ -942,7 +955,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\xgr32_stdctrls.pas"/>
@@ -951,7 +964,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\amEasing.pas"/>
@@ -959,7 +972,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Clipper.Core.pas"/>
@@ -967,7 +980,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Clipper.Engine.pas"/>
@@ -975,7 +988,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Clipper.inc"/>
@@ -983,7 +996,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Clipper.Minkowski.pas"/>
@@ -991,7 +1004,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Clipper.Offset.pas"/>
@@ -999,7 +1012,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Clipper.pas"/>
@@ -1007,7 +1020,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Clipper.RectClip.pas"/>
@@ -1015,7 +1028,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Packages\Lazarus\GR32_DSGN_Lazarus.lpk"/>
@@ -1023,7 +1036,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="XML"/>
       </Unit>
       <Unit>
@@ -1032,7 +1045,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Packages\Lazarus\GR32_Lazarus.lpk"/>
@@ -1040,7 +1053,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="XML"/>
       </Unit>
       <Unit>
@@ -1049,14 +1062,14 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="693"/>
         <CursorPos Y="704"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\controls.pp"/>
@@ -1064,27 +1077,27 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1499"/>
         <CursorPos X="14" Y="1507"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="graphics32\Source\Design\GR32.Design.Reg.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="42"/>
         <CursorPos X="3" Y="54"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\fpimagebitmap.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="130"/>
         <CursorPos Y="141"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="hccolorbox2.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="25" Y="8"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -1092,7 +1105,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="6"/>
         <CursorPos X="11" Y="15"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\packages\fcl-image\src\fpcanvas.pp"/>
@@ -1100,7 +1113,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="368"/>
         <CursorPos X="15" Y="375"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\graphics.pp"/>
@@ -1108,7 +1121,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="47"/>
         <CursorPos X="3" Y="59"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\components\lazutils\graphtype.pp"/>
@@ -1116,7 +1129,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="36"/>
         <CursorPos X="3" Y="44"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\packages\rtl-objpas\src\inc\system.uitypes.pp"/>
@@ -1124,7 +1137,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="33"/>
         <CursorPos X="5" Y="26"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\rtl\objpas\math.pp"/>
@@ -1132,7 +1145,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="198"/>
         <CursorPos X="63" Y="204"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\hc\fpcupdeluxe\fpcsrc\rtl\objpas\math.pp"/>
@@ -1140,20 +1153,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2042"/>
         <CursorPos X="12" Y="2056"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\ccr\lamw\android_bridges\tfpandroidbridge_pack.pas"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="31" Y="12"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\graphics32-1-9-1-fixes-r2148\Graphics32\GR32_RangeBars.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="675"/>
         <CursorPos X="17" Y="675"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\hc\fpcupdeluxe\lazarus\ide\lazarus.pp"/>
@@ -1162,97 +1176,99 @@
         <TopLine Value="127"/>
         <CursorPos Y="171"/>
         <FoldState Value=" T0k9R41 PG82m"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\config_lazarus\onlinepackagemanager\packages\BGRABitmap\bgrabitmap\unibitmap.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="43"/>
         <CursorPos X="3" Y="43"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="11"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\packages\graph\src\inc\graphh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="653"/>
         <CursorPos X="3" Y="665"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\rtl\win\wininc\func.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="742"/>
         <CursorPos X="10" Y="748"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="692"/>
         <CursorPos Y="704"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="19"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\include\customimage.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="35"/>
         <CursorPos Y="46"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\include\picture.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="428"/>
         <CursorPos Y="442"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\include\controlscrollbar.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="345"/>
         <CursorPos Y="356"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\include\wincontrol.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3084"/>
         <CursorPos Y="3096"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="14"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\packages\graph\src\win32\graph.pp"/>
         <UnitName Value="Graph"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="39" Y="6"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\hc\fpcupdeluxe\lazarus\lcl\interfaces\gtk2\gtk2widgetset.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="32"/>
         <CursorPos Y="44"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\graphics32-1-9-1-fixes-r2148\Graphics32\GR32_Image.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="79"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\hc\fpcupdeluxe\lazarus\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3990"/>
         <CursorPos Y="4000"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\graphics32-1-9-1-fixes-r2148\Graphics32\GR32.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2124"/>
         <CursorPos Y="2156"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\dialogs.pp"/>
@@ -1260,21 +1276,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="913"/>
         <CursorPos X="11" Y="907"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\include\customform.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3209"/>
         <CursorPos Y="3222"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="16"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\rtl\objpas\classes\classesh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="108"/>
         <CursorPos X="19" Y="115"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\components\lazutils\laztracer.pas"/>
@@ -1282,21 +1298,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos Y="58"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="13"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\include\application.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2254"/>
         <CursorPos Y="2272"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="13"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcuptrunk\fpcsrc\rtl\win\wininc\base.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1055"/>
         <CursorPos X="2" Y="1075"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\interfaces\carbon\carbonbars.pp"/>
@@ -1304,7 +1320,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="4"/>
         <CursorPos X="2" Y="16"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\..\FPCUP_TRUNK\lazarus\ide\lazarus.pp"/>
@@ -1312,13 +1328,13 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="72"/>
         <CursorPos X="2" Y="94"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="unitformdocument.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="51" Y="7"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -1326,14 +1342,14 @@
         <UnitName Value="BGRABitmapTypes"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="49" Y="16"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\..\FPCUP_TRUNK\lazarus\lcl\include\customform.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="989"/>
         <CursorPos Y="1006"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\..\FPCUP_TRUNK\lazarus\lcl\lclclasses.pp"/>
@@ -1341,7 +1357,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="154"/>
         <CursorPos Y="171"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\..\FPCUP_TRUNK\lazarus\lcl\widgetset\wslclclasses.pp"/>
@@ -1349,21 +1365,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="557"/>
         <CursorPos Y="574"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\..\FPCUP_TRUNK\lazarus\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="5781"/>
         <CursorPos Y="5809"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\..\FPCUP_TRUNK\lazarus\lcl\include\wincontrol.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="5458"/>
         <CursorPos Y="5474"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\..\FPCUP_TRUNK\fpcsrc\rtl\objpas\types.pp"/>
@@ -1371,28 +1387,99 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="369"/>
         <CursorPos X="37" Y="386"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\..\FPCUP_TRUNK\lazarus\lcl\include\menuitem.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="556"/>
         <CursorPos Y="573"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\..\FPCUP_TRUNK\config_lazarus\onlinepackagemanager\packages\ATFlatControls\atflatcontrols\attabs.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1266"/>
         <CursorPos Y="1283"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="11"/>
       </Unit>
       <Unit>
         <Filename Value="unitmessage.pas"/>
         <UnitName Value="unitMessage"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="27" Y="17"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="19"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\interfaces\win32\win32winapi.inc"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="3168"/>
+        <CursorPos Y="3184"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\include\lclintf.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="166"/>
+        <CursorPos Y="182"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\include\custombitmap.inc"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="478"/>
+        <CursorPos Y="502"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcuptrunk\lazarus\lcl\comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="577"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\lclintf.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="170"/>
+        <CursorPos X="42" Y="184"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\include\imglist.inc"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="1810"/>
+        <CursorPos Y="1822"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="616"/>
+        <CursorPos X="14" Y="625"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="435"/>
+        <CursorPos X="3" Y="446"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\home\pi\fpcupdeluxe\fpcsrc\rtl\win\wininc\func.inc"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="753"/>
+        <CursorPos X="28" Y="764"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
     <OtherDefines Count="1">
@@ -1400,124 +1487,124 @@
     </OtherDefines>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="413" Column="50" TopLine="394"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="225" Column="48" TopLine="212"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="409" Column="46" TopLine="393"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="408" Column="44" TopLine="392"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="271" Column="65" TopLine="255"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="270" Column="25" TopLine="254"/>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="459" TopLine="444"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="74" Column="3" TopLine="69"/>
+        <Caret Line="460" TopLine="444"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="97" TopLine="95"/>
+        <Caret Line="463" TopLine="444"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="366" Column="15" TopLine="352"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="270" Column="33" TopLine="254"/>
+        <Caret Line="457" TopLine="444"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="372" Column="3" TopLine="354"/>
+        <Caret Line="459" TopLine="444"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="337" Column="22" TopLine="317"/>
+        <Caret Line="462" TopLine="444"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="13" Column="16"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="416" Column="7" TopLine="401"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="415" Column="7" TopLine="400"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="416" Column="7" TopLine="401"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="415" Column="7" TopLine="400"/>
-      </Position>
-      <Position>
-        <Filename Value="lazarus_hcie.lpr"/>
-        <Caret Line="13" Column="57"/>
-      </Position>
-      <Position>
-        <Filename Value="hcglobals.pas"/>
-        <Caret Line="37"/>
-      </Position>
-      <Position>
-        <Filename Value="hcglobals.pas"/>
-        <Caret Line="7" Column="12"/>
-      </Position>
-      <Position>
-        <Filename Value="lazarus_hcie.lpr"/>
-        <Caret Line="13" Column="57"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="22" Column="53" TopLine="7"/>
+        <Caret Line="463" TopLine="444"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="12" Column="16"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="22" Column="53" TopLine="7"/>
+        <Caret Line="457" TopLine="444"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="366" Column="31" TopLine="357"/>
-      </Position>
-      <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="536" Column="15" TopLine="508"/>
+        <Caret Line="454" TopLine="444"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="371" Column="64" TopLine="357"/>
-      </Position>
-      <Position>
-        <Filename Value="hcglobals.pas"/>
-        <Caret Line="34" Column="40" TopLine="16"/>
+        <Caret Line="453" TopLine="443"/>
       </Position>
       <Position>
         <Filename Value="unitformdocument.pas"/>
-        <Caret Line="371" Column="63" TopLine="355"/>
+        <Caret Line="69" Column="14" TopLine="63"/>
       </Position>
       <Position>
-        <Filename Value="unitformmain.pas"/>
-        <Caret Line="523" Column="8" TopLine="512"/>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="97" Column="24" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="355" Column="4" TopLine="348"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="430" Column="3" TopLine="436"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="98" Column="58" TopLine="132"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="140" Column="41" TopLine="132"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="53" Column="17" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="217" Column="7" TopLine="197"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="467" Column="9" TopLine="454"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="427" Column="24" TopLine="420"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="98" Column="13" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="25" Column="25" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="457" Column="11" TopLine="450"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="101" Column="50" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="100" Column="13" TopLine="90"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="74" Column="36" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="200" Column="41" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="54" Column="15" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="191" Column="9" TopLine="181"/>
+      </Position>
+      <Position>
+        <Filename Value="unitformdocument.pas"/>
+        <Caret Line="193" TopLine="181"/>
       </Position>
     </JumpHistory>
     <RunParams>

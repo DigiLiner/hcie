@@ -378,9 +378,6 @@
         <PackageName Value="mbColorLibLaz"/>
       </Item>
       <Item>
-        <PackageName Value="bgrapascalscriptcomponent"/>
-      </Item>
-      <Item>
         <PackageName Value="bgracontrols"/>
       </Item>
       <Item>
@@ -473,6 +470,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="todo.txt"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -488,7 +489,7 @@
         <StackChecks Value="True"/>
       </Checks>
       <Optimizations>
-        <OptimizationLevel Value="4"/>
+        <OptimizationLevel Value="0"/>
       </Optimizations>
     </CodeGeneration>
     <Linking>

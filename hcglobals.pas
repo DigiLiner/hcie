@@ -8,22 +8,23 @@ uses
   Classes, SysUtils, ExtCtrls, Controls, Graphics, hctypes;
 
 var
-  oldX: integer; //Mouse X old
-  oldy: integer;
-
-  hcShift: TShiftState;
-  PX, PY: integer;
-  hMouseButton: hcMouseButton;
-  hMouseEvent: integer;
   foreColor, backColor: TColor;
   hctool: TToolType;
-  zoomFactor, ScaleFactor: single;
-  animrun: boolean; // Çok gerekli değil test için
+  //todo bir ara bunları document içine alabilirim
+  ScaleFactor: single;
+  hMouseButton: hcMouseButton;
+  hMouseEvent: integer;
+  oldX: integer; //Mouse X old
+  oldy: integer;
+  hcShift: TShiftState;
+  PX, PY: integer;
+   animrun: boolean; // Çok gerekli değil test için
+
   penWidth: integer;
-  //Ana form Status Bar yazıları
-  statusText: string; // Ana formdaki status bara yazılacak yazı
-  status:boolean ;// Text Güncellemesi var demektir
-  imageCounter:integer ; // Açık pencerelerdeki resim numaraları
+  //Status Bar text on MainForm
+  statusText: string; // A text will be written
+  status: boolean;// True when a text updated
+  imageCounter: integer; //Image Number counter
 
 const
   hMouseDown = 1281101;
@@ -33,16 +34,16 @@ const
 
 function max(a, b: longint): longint;
 function min(a, b: longint): longint;
-procedure UpdateText(NewText:string);
+procedure UpdateText(NewText: string);
 
 
 // HC12 function Color32toColor (TColor32: TColor32): TColor;
 implementation
 
-procedure UpdateText(NewText:string);
+procedure UpdateText(NewText: string);
 begin
-      StatusText:=     NewText;
-      status:=true;
+  StatusText := NewText;
+  status := True;
 
 end;
 
@@ -51,17 +52,17 @@ end;
 function max(a, b: longint): longint;
 begin
   if a > b then
-    max := a
+    Result := a
   else
-    max := b;
+    Result := b;
 end;
 
 function min(a, b: longint): longint;
 begin
   if a < b then
-    min := a
+    Result := a
   else
-    min := b;
+    Result := b;
 end;
 
 //HC12

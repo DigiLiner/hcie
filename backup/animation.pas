@@ -67,9 +67,9 @@ begin
       end;
       ay := ax;
 
-       Image1.PictureBitmap.EndUpdate();
+       Image1.Picture.Bitmap.EndUpdate();
     end;
-  until animrun = False;
+  until FormDocument.animrun = False;
 end;
 
 end.
