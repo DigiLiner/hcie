@@ -35,13 +35,13 @@ type
 
 
   protected
-    procedure MouseDown(Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer); override;
+    procedure MouseDown(Button: TMouseButton;Shift: TShiftState; X, Y: Integer); override;
     procedure PaintWindow(DC: HDC); override;
-  var
-   const btnSize = 10;
-   const xoff   =-2;
-   const  yoff =5;
+  v
+  const
+   btnSize = 10;
+   xoff   =-2;
+   yoff =5;
   end;
   {$ENDIF}
 
@@ -248,8 +248,8 @@ begin
   if Button = mbLeft then
   begin
     R := TabRect(ActivePageIndex);
-   if PtInRect(Classes.Rect(R.Right - btnSize + xoff, R.Top + yoff,
-                             R.Right +xoff, R.Top + btnSize + yoff),
+   if PtInRect(Classes.Rect(R.Right - btnSize + xoff-3, R.Top + yoff-3,
+                             R.Right +xoff+4, R.Top + btnSize + yoff+4),
               Classes.Point(X, Y))
     then ActivePage.Free;
   end;

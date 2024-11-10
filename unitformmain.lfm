@@ -8,9 +8,10 @@ object FormMain: TFormMain
   ClientWidth = 858
   DoubleBuffered = True
   Menu = MainMenu1
-  OnCreate = FormCreate
   ParentDoubleBuffered = False
+  LCLVersion = '4.99.0.0'
   Visible = True
+  OnCreate = FormCreate
   object ToolBarStandard: TToolBar
     AnchorSideTop.Control = Owner
     Left = 1
@@ -76,8 +77,8 @@ object FormMain: TFormMain
       Caption = '&Filters'
       DropdownMenu = PopupMenuCircle
       ImageIndex = 6
-      OnClick = ToolButtonEllipseClick
       Style = tbsDropDown
+      OnClick = ToolButtonEllipseClick
     end
     object ToolButtonZoomIn: TToolButton
       Left = 355
@@ -112,14 +113,14 @@ object FormMain: TFormMain
     end
     object S1: TToolButton
       Left = 87
-      Height = 24
+      Height = 8
       Top = 2
       Caption = '-'
       Style = tbsSeparator
     end
     object S2: TToolButton
       Left = 95
-      Height = 24
+      Height = 8
       Top = 2
       Caption = '-'
       Style = tbsSeparator
@@ -132,7 +133,7 @@ object FormMain: TFormMain
     end
     object S3: TToolButton
       Left = 131
-      Height = 24
+      Height = 8
       Top = 2
       Caption = '_'
       Style = tbsSeparator
@@ -157,7 +158,7 @@ object FormMain: TFormMain
     end
     object S4: TToolButton
       Left = 223
-      Height = 24
+      Height = 8
       Top = 2
       Style = tbsSeparator
     end
@@ -186,21 +187,21 @@ object FormMain: TFormMain
     end
     object S5: TToolButton
       Left = 315
-      Height = 24
+      Height = 8
       Top = 2
       Caption = '_'
       Style = tbsSeparator
     end
     object S6: TToolButton
       Left = 347
-      Height = 24
+      Height = 8
       Top = 2
       Caption = 'S6'
       Style = tbsSeparator
     end
     object S7: TToolButton
       Left = 439
-      Height = 24
+      Height = 8
       Top = 2
       Caption = 'S7'
       Style = tbsSeparator
@@ -307,8 +308,8 @@ object FormMain: TFormMain
           Height = 23
           Top = 8
           Width = 146
-          OnMouseMove = ImageWidthMouseMove
           Transparent = True
+          OnMouseMove = ImageWidthMouseMove
         end
         object ImageTransparency: TImage
           Tag = 1
@@ -316,8 +317,8 @@ object FormMain: TFormMain
           Height = 24
           Top = 40
           Width = 146
-          OnMouseMove = ImageWidthMouseMove
           Transparent = True
+          OnMouseMove = ImageWidthMouseMove
         end
         object ImageRadius: TImage
           Tag = 2
@@ -325,8 +326,8 @@ object FormMain: TFormMain
           Height = 23
           Top = 71
           Width = 146
-          OnMouseMove = ImageWidthMouseMove
           Transparent = True
+          OnMouseMove = ImageWidthMouseMove
         end
         object TrackBar1: TTrackBar
           Left = 16

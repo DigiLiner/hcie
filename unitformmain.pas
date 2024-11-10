@@ -35,13 +35,12 @@ type
 
 
   protected
-    procedure MouseDown(Button: TMouseButton;
-      Shift: TShiftState; X, Y: Integer); override;
+    procedure MouseDown(Button: TMouseButton;Shift: TShiftState; X, Y: Integer); override;
     procedure PaintWindow(DC: HDC); override;
-  var
-   const btnSize = 10;
-   const xoff   =-2;
-   const  yoff =5;
+  const
+   btnSize = 10;
+   xoff   =-2;
+   yoff =5;
   end;
   {$ENDIF}
 
