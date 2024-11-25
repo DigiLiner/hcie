@@ -172,7 +172,7 @@ BEGIN
   Image1.Picture.Bitmap.SetSize(Image1.Width, Image1.Height);
   Image2.Width := Image1.Width;
   Image2.Height := Image1.Height;
-  {$IFDEF TRANSPARENCY_TEST_01}
+  {$IFNDEF TRANSPARENCY_TEST_01}
   	//  Temporary disabled test transparency 9.11.24
         bmp1 := TBGRABitmap.Create(300, 300, BGRAWhite);
  	bmp1.Draw(Image1.Canvas, 0, 0, True);
@@ -212,7 +212,7 @@ BEGIN
    }
     _image.Picture.Bitmap.Width := _width;
     _image.Picture.Bitmap.Height := _height;
-    {$IFDEF TRANSPARENCY_TEST_01}
+    {$IFNDEF TRANSPARENCY_TEST_01}
 	_Image.Picture.Bitmap.Canvas.Brush.Color := $FFFFFF;
 	_Image.Picture.Bitmap.Canvas.Brush.Style := bsSolid;
 	_Image.Picture.Bitmap.Canvas.FillRect(0, 0, _Width, _Height);

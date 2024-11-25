@@ -8,22 +8,9 @@ object FormMain: TFormMain
   ClientWidth = 858
   DoubleBuffered = True
   Menu = MainMenu1
-  ParentDoubleBuffered = False
-  LCLVersion = '4.99.0.0'
-  Visible = True
   OnCreate = FormCreate
-  object StatusBar1: TStatusBar
-    Left = 0
-    Height = 18
-    Top = 473
-    Width = 858
-    Panels = <    
-      item
-        Text = 'Coords XY'
-        Width = 50
-      end>
-    SimplePanel = False
-  end
+  ParentDoubleBuffered = False
+  Visible = True
   object ToolBarStandard: TToolBar
     AnchorSideTop.Control = Owner
     Left = 1
@@ -42,7 +29,7 @@ object FormMain: TFormMain
     ParentColor = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 2
+    TabOrder = 1
     object ToolButtonNew: TToolButton
       Left = 3
       Top = 2
@@ -89,14 +76,15 @@ object FormMain: TFormMain
       Caption = '&Filters'
       DropdownMenu = PopupMenuCircle
       ImageIndex = 6
-      Style = tbsDropDown
       OnClick = ToolButtonEllipseClick
+      Style = tbsDropDown
     end
     object ToolButtonZoomIn: TToolButton
       Left = 355
       Top = 2
       Caption = 'Zoom In'
       ImageIndex = 7
+      OnClick = ToolButtonZoomInClick
     end
     object ToolButtonZoomOut: TToolButton
       Left = 383
@@ -124,14 +112,14 @@ object FormMain: TFormMain
     end
     object S1: TToolButton
       Left = 87
-      Height = 8
+      Height = 24
       Top = 2
       Caption = '-'
       Style = tbsSeparator
     end
     object S2: TToolButton
       Left = 95
-      Height = 8
+      Height = 24
       Top = 2
       Caption = '-'
       Style = tbsSeparator
@@ -144,7 +132,7 @@ object FormMain: TFormMain
     end
     object S3: TToolButton
       Left = 131
-      Height = 8
+      Height = 24
       Top = 2
       Caption = '_'
       Style = tbsSeparator
@@ -169,7 +157,7 @@ object FormMain: TFormMain
     end
     object S4: TToolButton
       Left = 223
-      Height = 8
+      Height = 24
       Top = 2
       Style = tbsSeparator
     end
@@ -198,21 +186,21 @@ object FormMain: TFormMain
     end
     object S5: TToolButton
       Left = 315
-      Height = 8
+      Height = 24
       Top = 2
       Caption = '_'
       Style = tbsSeparator
     end
     object S6: TToolButton
       Left = 347
-      Height = 8
+      Height = 24
       Top = 2
       Caption = 'S6'
       Style = tbsSeparator
     end
     object S7: TToolButton
       Left = 439
-      Height = 8
+      Height = 24
       Top = 2
       Caption = 'S7'
       Style = tbsSeparator
@@ -227,23 +215,24 @@ object FormMain: TFormMain
   end
   object AnchorDockPanel1: TAnchorDockPanel
     Left = 658
-    Height = 445
+    Height = 440
     Top = 28
     Width = 200
     Align = alRight
     BorderStyle = bsSingle
     Caption = 'AnchorDockPanel1'
-    ClientHeight = 443
-    ClientWidth = 198
+    ClientHeight = 436
+    ClientWidth = 196
     Constraints.MinWidth = 200
     DockSite = True
     FullRepaint = False
-    TabOrder = 1
+    ParentBackground = False
+    TabOrder = 0
     object Label1: TLabel
       Left = 1
       Height = 15
       Top = 1
-      Width = 196
+      Width = 194
       Align = alTop
       Alignment = taCenter
       AutoSize = False
@@ -261,9 +250,9 @@ object FormMain: TFormMain
       AnchorSideRight.Control = AnchorDockPanel1
       AnchorSideRight.Side = asrBottom
       Left = -14
-      Height = 16
+      Height = 15
       Top = 200
-      Width = 211
+      Width = 209
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
       Caption = 'Properties'
@@ -279,32 +268,34 @@ object FormMain: TFormMain
       AnchorSideBottom.Control = AnchorDockPanel1
       AnchorSideBottom.Side = asrBottom
       Left = -8
-      Height = 224
-      Top = 217
-      Width = 204
+      Height = 218
+      Top = 216
+      Width = 202
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Around = 1
       BevelOuter = bvLowered
       Caption = 'Panel2'
-      ClientHeight = 224
-      ClientWidth = 204
+      ClientHeight = 218
+      ClientWidth = 202
       FullRepaint = False
+      ParentBackground = False
       TabOrder = 0
       object FlowPanel1: TPanel
         Left = 1
-        Height = 216
+        Height = 210
         Top = 1
-        Width = 202
+        Width = 200
         Align = alTop
         Anchors = [akTop, akLeft, akRight, akBottom]
         Caption = 'FlowPanel1'
-        ClientHeight = 216
-        ClientWidth = 202
+        ClientHeight = 210
+        ClientWidth = 200
         FullRepaint = False
+        ParentBackground = False
         TabOrder = 0
         object EditWidth: TEdit
-          Left = 170
-          Height = 28
+          Left = 168
+          Height = 23
           Top = 8
           Width = 24
           Anchors = [akTop]
@@ -316,8 +307,8 @@ object FormMain: TFormMain
           Height = 23
           Top = 8
           Width = 146
-          Transparent = True
           OnMouseMove = ImageWidthMouseMove
+          Transparent = True
         end
         object ImageTransparency: TImage
           Tag = 1
@@ -325,8 +316,8 @@ object FormMain: TFormMain
           Height = 24
           Top = 40
           Width = 146
-          Transparent = True
           OnMouseMove = ImageWidthMouseMove
+          Transparent = True
         end
         object ImageRadius: TImage
           Tag = 2
@@ -334,8 +325,8 @@ object FormMain: TFormMain
           Height = 23
           Top = 71
           Width = 146
-          Transparent = True
           OnMouseMove = ImageWidthMouseMove
+          Transparent = True
         end
         object TrackBar1: TTrackBar
           Left = 16
@@ -387,18 +378,19 @@ object FormMain: TFormMain
     end
     object CheckBoxWebSafe: TCheckBox
       Left = 83
-      Height = 23
+      Height = 19
       Top = 155
-      Width = 82
+      Width = 67
       Caption = 'Web Safe'
       TabOrder = 1
       OnChange = CheckBoxWebSafeChange
     end
     object LabelForeColor: TLabel
-      Left = 3
+      Left = 10
       Height = 20
-      Top = 156
+      Top = 161
       Width = 40
+      Anchors = []
       AutoSize = False
       Color = clRed
       ParentColor = False
@@ -408,7 +400,7 @@ object FormMain: TFormMain
       Left = 8
       Height = 132
       Top = 24
-      Width = 188
+      Width = 186
       ParentColor = False
       Align = alCustom
       Anchors = [akTop, akLeft, akRight]
@@ -422,14 +414,45 @@ object FormMain: TFormMain
     end
   end
   object BGRAGraphicControl1: TBGRAGraphicControl
-    Left = 56
+    Left = 440
     Height = 64
-    Top = 352
+    Top = 312
     Width = 72
     Color = clWhite
     ColorOpacity = 128
     Alignment = taCenter
     Caption = 'BGRAGraphicControl1'
+  end
+  object PageControl1: TPageControl
+    Left = 8
+    Height = 328
+    Top = 40
+    Width = 392
+    ActivePage = TabSheet1
+    HotTrack = True
+    Images = ImageList2
+    ImagesWidth = 16
+    TabIndex = 0
+    TabOrder = 2
+    TabWidth = 100
+    OnChange = PageControl1Change
+    OnCloseTabClicked = PageControl1CloseTabClicked
+    Options = [nboShowCloseButtons]
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 468
+    Width = 858
+    Panels = <    
+      item
+        Text = 'Coords XY'
+        Width = 50
+      end>
+    SimplePanel = False
   end
   object ImageList1: TImageList
     BlendColor = clDefault
@@ -437,8 +460,8 @@ object FormMain: TFormMain
     DrawingStyle = dsTransparent
     Height = 32
     Width = 32
-    Left = 392
-    Top = 32
+    Left = 432
+    Top = 64
     Bitmap = {
       4C7A160000002000000020000000DC2D00000000000078DAED9D07581547D780
       97A2A0805C505029826005EC057B8D2596186354B04463AC8862A1DA7B89C65E
@@ -1622,5 +1645,41 @@ object FormMain: TFormMain
     object MenuItemHelp: TMenuItem
       Caption = '&Help'
     end
+  end
+  object TimerStatus: TTimer
+    Interval = 50
+    OnTimer = TimerStatusTimer
+    Left = 504
+    Top = 152
+  end
+  object ImageList2: TImageList
+    BkColor = clFuchsia
+    DrawingStyle = dsTransparent
+    ImageType = itMask
+    Masked = True
+    Left = 488
+    Top = 72
+    Bitmap = {
+      4C7A010000001000000010000000FD0000000000000078DA2B29F9FFBFB2923C
+      5C5202C77FC9D1CBC01009674B4B57FD97949CF4DFCDEDCF7F65E57FFF1919B1
+      637EFE6BFF4545F380EC5340FDF670F32425EFFE97922AF8AFA5B5E6BF87C75F
+      AC6680F48A8965FD3736DE0BE41F41D10F9257513987D30C985E1393FDFF5D5D
+      BF62D58FCB0C74BD1073B1EB4737C3CEEE31506F369A5EFCFA61664848E400F5
+      6680F5BAB87C410B13FCFA216ECE049BA1A9B91A4BBCE0D68FEC5F6BEB6BC0B8
+      C9FFAFA6B6142D4CB1EBC71656B2B297B09881A91F7B384330BA19E8FAD9D89E
+      82FD8B4D2F3633D0F58B8AA683D395B4F457BCE917640628AD23EB2F29F90EE4
+      1F078B918241FA61F908C426070300DEF41E50
+    }
+  end
+  object IdleTimer1: TIdleTimer
+    Left = 550
+    Top = 66
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 30
+    OnTimer = Timer1Timer
+    Left = 549
+    Top = 160
   end
 end

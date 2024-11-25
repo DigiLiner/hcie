@@ -7,8 +7,6 @@ object FormDocument: TFormDocument
   Caption = 'FormDocument'
   ClientHeight = 300
   ClientWidth = 400
-  Constraints.MaxHeight = 300
-  Constraints.MaxWidth = 400
   OnCreate = FormCreate
   OnShow = FormShow
   object MainPanel: TPanel
@@ -60,6 +58,14 @@ object FormDocument: TFormDocument
           Anchors = []
           KeepOriginXWhenClipped = True
           KeepOriginYWhenClipped = True
+          OnClick = Image1Click
+          OnMouseDown = Image1MouseDown
+          OnMouseMove = Image1MouseMove
+          OnMouseUp = Image1MouseUp
+          OnMouseWheelDown = Image1MouseWheelDown
+          OnMouseWheelUp = Image1MouseWheelUp
+          OnPaint = Image1Paint
+          OnResize = Image1Resize
           Picture.Data = {
             1754506F727461626C654E6574776F726B477261706869639D04020089504E47
             0D0A1A0A0000000D494844520000019C0000018C0806000000EE9714A2000000
@@ -4198,14 +4204,6 @@ object FormDocument: TFormDocument
           }
           Proportional = True
           Stretch = True
-          OnClick = Image1Click
-          OnMouseDown = Image1MouseDown
-          OnMouseMove = Image1MouseMove
-          OnMouseUp = Image1MouseUp
-          OnMouseWheelDown = Image1MouseWheelDown
-          OnMouseWheelUp = Image1MouseWheelUp
-          OnPaint = Image1Paint
-          OnResize = Image1Resize
         end
       end
     end

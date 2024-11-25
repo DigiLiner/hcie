@@ -13,18 +13,17 @@ uses
   {$IFDEF WINDOWS}
   Windows,Registry,
   {$ENDIF}
-  Classes, interfaces, SysUtils, Forms, Controls, Graphics, Dialogs, Menus,
-  ExtCtrls, StdCtrls, ComCtrls, ExtDlgs, AnchorDockPanel, crt,
-  unitFormNewImage, BCFluentSlider, BCToolBar,
-  BGRAFlashProgressBar, BGRAImageList, BGRAImageManipulation, BGRACustomDrawn,
-  BGRAShape, BCTrackbarUpdown, BCMaterialProgressBarMarquee,
-  BCFluentProgressRing, BCLeaLCDDisplay, BCLeaLED, HexaColorPicker, hctypes,
-  hcGlobals, animation, hcslider // Sliders
+  Classes ,interfaces ,SysUtils ,Forms ,Controls ,Graphics ,Dialogs ,Menus ,
+  ExtCtrls ,StdCtrls ,ComCtrls ,ExtDlgs ,AnchorDockPanel ,crt ,unitFormNewImage ,
+  BCFluentSlider ,BCToolBar ,BGRAFlashProgressBar ,BGRAImageList ,
+  BGRAImageManipulation ,BGRACustomDrawn ,BGRAShape ,BCTrackbarUpdown ,
+  BCMaterialProgressBarMarquee ,BCFluentProgressRing ,BCLeaLCDDisplay ,BCLeaLED ,
+  BGRASVGImageList ,HexaColorPicker ,hctypes ,hcGlobals ,animation ,hcslider // Sliders
   , line, pen, circle, fill
   , unitCanvasSizeDialog
   , unitformdocument
   , LResources, BGRABitmap, BGRABitmapTypes  //BGRA Bitmap
-  , Types;
+  , Types, BCTypes;
 
 type
 
@@ -36,12 +35,15 @@ type
 
   protected
     procedure MouseDown(Button: TMouseButton;Shift: TShiftState; X, Y: Integer); override;
+    procedure MouseMove ( Shift :TShiftState ; X ,Y :Integer );override;
     procedure PaintWindow(DC: HDC); override;
-  v
   const
    btnSize = 10;
-   xoff   =-2;
+   xoff   =-5;
    yoff =5;
+
+  var
+     onmouse:array  of boolean;
   end;
   {$ENDIF}
 
@@ -53,7 +55,10 @@ type
     BCLeaLED1: TBCLeaLED;
     BCLeaLED2: TBCLeaLED;
     BCLeaLED3: TBCLeaLED;
+    BCToolBar1 :TBCToolBar ;
     BGRAGraphicControl1: TBGRAGraphicControl;
+    BGRAImageList1 :TBGRAImageList ;
+    BGRASVGImageList1 :TBGRASVGImageList ;
     CalculatorDialog1: TCalculatorDialog;
     CheckBoxWebSafe: TCheckBox;
     ColorDialog1: TColorDialog;
@@ -158,7 +163,6 @@ type
     Timer1: TTimer;
     TimerStartup: TTimer;
     TimerStatus: TTimer;
-    ToolBarStandard: TToolBar;
     S1: TToolButton;
     S3: TToolButton;
     S4: TToolButton;
@@ -190,6 +194,7 @@ type
     TrackBar1: TTrackBar;
 
     procedure BCMaterialProgressBarMarquee1Click(Sender: TObject);
+    procedure BCToolBar1Redraw (Sender :TObject ; Bitmap :TBGRABitmap );
     procedure BCTrackbarUpdown1Change(Sender: TObject; AByUser: boolean);
     procedure CheckBoxWebSafeChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -203,6 +208,10 @@ type
       X, Y: integer);
     procedure MenuItemExitClick(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
+    procedure PageControl1CloseTabClicked (Sender :TObject );
+    procedure PageControl1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: integer);
+
     procedure ScrollBox1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure TimerStatusTimer(Sender: TObject);
@@ -254,6 +263,31 @@ begin
     then ActivePage.Free;
   end;
 end;
+procedure TPageControl.MouseMove (Shift :TShiftState ; X ,
+      Y :Integer );
+var
+   i  :integer;
+  R : TRect;
+  bm : TBitmap;
+  Pen: HPEN;
+  OldPen : HPEN;
+  DrawColor: TColor;
+  Red, Green, Blue: Byte;
+begin
+  inherited MouseMove(Shift,X,Y);
+   R := TabRect(ActivePageIndex);
+   SetLength(onmouse,PageCount +1);
+           if PtInRect(Classes.Rect(R.Right - btnSize + xoff-3, R.Top + yoff-3,
+                             R.Right +xoff+4, R.Top + btnSize + yoff+4),
+              Classes.Point(X, Y))  then
+              begin
+                onmouse[ActivePageIndex]  :=true;
+              end else
+                    onmouse[ActivePageIndex] :=false;
+
+           Repaint;
+
+end ;
 
 procedure TPageControl.PaintWindow(DC: HDC);
 var
@@ -272,6 +306,7 @@ begin
   try
     bm.SetSize(16, 16);
     Images.GetBitmap(0, bm);
+     SetLength(onmouse,PageCount +1);
 
     for i := 0 to Pred(PageCount) do
     begin
@@ -281,11 +316,13 @@ begin
           Red := GetRValue(DrawColor);
           Green := GetGValue(DrawColor);
           Blue := GetBValue(DrawColor);
-
+           if onmouse[i] =true then
+          begin
           Pen := CreatePen(PS_SOLID, 1, RGB( red, green, blue)); // 5 is the thickness of the pen
           OldPen := SelectObject(DC, Pen);
           Rectangle(DC,R.Right - btnSize+Xoff-3 ,R.Top +yoff -3,
           R.Right +Xoff +4,r.Top+btnSize +yoff +4 );
+          end;
 
           Pen := CreatePen(PS_SOLID, 2, RGB( red, green, blue)); // 5 is the thickness of the pen
           OldPen := SelectObject(DC, Pen);
@@ -526,6 +563,7 @@ begin
       NewDoc.Caption := 'NewImage';
       NewDoc.EmptyImage := True;
       NewDoc.Parent := NewPage;
+      NewDoc.Align:=alClient; //Necessary for Linux
       NewDoc.WindowState := wsMaximized;
       Inc(imageCounter); // Increment last image number
       NewPage.Caption := 'Image' + imageCounter.ToString;
@@ -571,6 +609,12 @@ end;
 procedure TFormMain.BCMaterialProgressBarMarquee1Click(Sender: TObject);
 begin
 
+end;
+
+procedure TFormMain .BCToolBar1Redraw (Sender :TObject ; Bitmap :TBGRABitmap );
+begin
+  // This code paints toolbar background
+   Bitmap.Fill(clBtnFace);
 end;
 
 procedure TFormMain.BCTrackbarUpdown1Change(Sender: TObject; AByUser: boolean);
@@ -655,6 +699,19 @@ begin
   end;
 
 end;
+
+procedure TFormMain .PageControl1CloseTabClicked (Sender :TObject );
+begin
+  //Linux only
+    PageControl1.ActivePage.Free;
+end;
+
+procedure TFormMain.PageControl1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: integer);
+begin
+
+end;
+
 //Use to active image page
 function findDocument(docTag: integer): TFormDocument;
 var
@@ -694,7 +751,6 @@ begin
     TimerStatus.Enabled := True;
   end;
 end;
-
 
 
 

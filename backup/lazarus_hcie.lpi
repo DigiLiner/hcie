@@ -509,7 +509,6 @@
         <ShowCompProc Value="True"/>
         <ShowHintsForSenderNotUsed Value="True"/>
       </Verbosity>
-      <CustomOptions Value="-dTRANSPARENCY_TEST_01"/>
       <OtherDefines Count="3">
         <Define0 Value="GR32"/>
         <Define1 Value="TEST01"/>
