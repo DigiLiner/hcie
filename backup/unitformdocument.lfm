@@ -7,9 +7,8 @@ object FormDocument: TFormDocument
   Caption = 'FormDocument'
   ClientHeight = 300
   ClientWidth = 400
-  Constraints.MaxHeight = 300
-  Constraints.MaxWidth = 400
   OnCreate = FormCreate
+  OnResize = FormResize
   OnShow = FormShow
   object MainPanel: TPanel
     Left = 0

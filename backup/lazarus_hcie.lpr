@@ -9,15 +9,19 @@ uses
   {$IFDEF HASAMIGA}
   athreads,
   {$ENDIF}
-  customdrawn,Interfaces, // this includes the LCL widgetset
-  Forms,  unitFormMain, unitFormNewImage,fill,circle,pen;
+  Interfaces, // this includes the LCL widgetset
+  Forms,  unitFormMain, unitFormNewImage
+  ,hceffects, hctypes, hcGlobals, hcFileTypes
+  , line, pen, circle, fill
+  , animation , unitformeffect , unitformeffect ;
   {$R *.res}
 
 begin
   RequireDerivedFormResource := True;
-  Application.Scaled:=True;
+  Application .Scaled :=True ;
   Application.Initialize;
   Application.CreateForm(TFormMain, FormMain);
   Application.CreateForm(TFormNewImage, FormNewImage);
+  Application .CreateForm (TFormEffect ,FormEffect );
   Application.Run;
 end.

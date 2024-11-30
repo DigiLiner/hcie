@@ -18,11 +18,13 @@ uses
   BCFluentSlider ,BCToolBar ,BGRAFlashProgressBar ,BGRAImageList ,
   BGRAImageManipulation ,BGRACustomDrawn ,BGRAShape ,BCTrackbarUpdown ,
   BCMaterialProgressBarMarquee ,BCFluentProgressRing ,BCLeaLCDDisplay ,BCLeaLED ,
-  BGRASVGImageList ,HexaColorPicker ,hctypes ,hcGlobals ,animation ,hcslider // Sliders
+  BGRASVGImageList ,HexaColorPicker ,mbColorList ,mbColorPalette ,hctypes ,
+  hcGlobals ,animation ,hcslider // Sliders
+  ,unitformeffect
   , line, pen, circle, fill
   , unitCanvasSizeDialog
   , unitformdocument
-  , LResources, BGRABitmap, BGRABitmapTypes  //BGRA Bitmap
+  , LResources ,ColorBox, BGRABitmap, BGRABitmapTypes  //BGRA Bitmap
   , Types, BCTypes;
 
 type
@@ -60,7 +62,6 @@ type
     BGRAImageList1 :TBGRAImageList ;
     BGRASVGImageList1 :TBGRASVGImageList ;
     CalculatorDialog1: TCalculatorDialog;
-    CheckBoxWebSafe: TCheckBox;
     ColorDialog1: TColorDialog;
     EditWidth: TEdit;
     FindDialog1: TFindDialog;
@@ -68,6 +69,7 @@ type
     FontDialog1: TFontDialog;
     HexaColorPicker1: THexaColorPicker;
     IdleTimer1: TIdleTimer;
+    Image1 :TImage ;
 
     ImageList1: TImageList;
     ImageList2: TImageList;
@@ -76,7 +78,6 @@ type
     ImageWidth: TImage;
     Label1: TLabel;
     Label2: TLabel;
-    LabelForeColor: TLabel;
     MainMenu1: TMainMenu;
     MenuItemCopy: TMenuItem;
     MenuItemPaste: TMenuItem;
@@ -158,6 +159,7 @@ type
     Separator1: TMenuItem;
     Separator2: TMenuItem;
     Separator3: TMenuItem;
+    StaticText1 :TStaticText ;
     StatusBar1: TStatusBar;
     TabSheet1: TTabSheet;
     Timer1: TTimer;
@@ -169,6 +171,7 @@ type
     S5: TToolButton;
     S6: TToolButton;
     S7: TToolButton;
+    ToolButton1 :TToolButton ;
     ToolButtonFill: TToolButton;
     ToolButtonRedo: TToolButton;
     ToolButtonClear: TToolButton;
@@ -215,6 +218,7 @@ type
     procedure ScrollBox1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure TimerStatusTimer(Sender: TObject);
+    procedure ToolButton1Click (Sender :TObject );
     procedure ToolButtonFillClick(Sender: TObject);
     procedure ToolButtonNewClick(Sender: TObject);
     procedure ToolButtonBlurClick(Sender: TObject);
@@ -557,7 +561,8 @@ begin
     if DialogForm.ModalResult = mrOk then
     begin
       NewPage := PageControl1.AddTabSheet;
-      NewDoc := TFormDocument.Create(Application);
+      NewDoc := TFormDocument.Create(Self);   //Necessary for Linux
+      NewDoc.BorderStyle:=bsNone;  //Necessary for Linux
       NewDoc.ImageWidth := DialogForm.NewImageWidth;
       NewDoc.ImageHeight := DialogForm.NewImageHeight;
       NewDoc.Caption := 'NewImage';
@@ -752,6 +757,17 @@ begin
   end;
 end;
 
+procedure TFormMain .ToolButton1Click (Sender :TObject );
+var
+   frmEffect : TformEffect; // Declare a variable for the new form
 
+begin
+  // Create an instance of TMyForm
+  frmEffect := TformEffect.Create(nil); // nil means it has no owner
+  try
+    frmEffect.ShowModal;
+  finally
+  end;
+end;
 
 end.

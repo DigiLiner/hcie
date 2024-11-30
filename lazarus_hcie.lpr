@@ -10,7 +10,10 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms,  unitFormMain, unitFormNewImage,fill,circle,pen;
+  Forms,  unitFormMain, unitFormNewImage
+  ,hceffects, hctypes, hcGlobals, hcFileTypes
+  , line, pen, circle, fill
+  , animation  , unitformeffect ;
   {$R *.res}
 
 begin
@@ -19,5 +22,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TFormMain, FormMain);
   Application.CreateForm(TFormNewImage, FormNewImage);
+  Application .CreateForm (TFormEffect ,FormEffect );
   Application.Run;
 end.

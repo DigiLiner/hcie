@@ -375,6 +375,12 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="bgragames"/>
+      </Item>
+      <Item>
+        <PackageName Value="IDEIntf"/>
+      </Item>
+      <Item>
         <PackageName Value="mbColorLibLaz"/>
       </Item>
       <Item>
@@ -473,6 +479,17 @@
       <Unit>
         <Filename Value="todo.txt"/>
         <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="hcfiletypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="hcFileTypes"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitformeffect.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormEffect"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>
   </ProjectOptions>

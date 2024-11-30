@@ -6,11 +6,13 @@ INTERFACE
 
 USES
   Classes, ComCtrls, ExtCtrls, Menus, SysUtils, Forms, Controls, Graphics, Dialogs
-  , hceffects, hctypes, hcGlobals
   , LResources, BGRABitmap, BGRABitmapTypes  //BGRA Bitmap
-  , line, pen, circle, fill
+  , Types
+  , hceffects, hctypes, hcGlobals ,hcFileTypes
+  ,line, pen, circle, fill
   , animation
-  , Types;
+
+  ;
 
 TYPE
   { TFormDocument}
@@ -23,6 +25,7 @@ TYPE
     ScrollBox1: TScrollBox;
     Timer1: TTimer;
     PROCEDURE FormCreate(Sender: TObject);
+    procedure FormResize (Sender :TObject );
     PROCEDURE FormShow(Sender: TObject);
     PROCEDURE Image1Click(Sender: TObject);
     PROCEDURE Image1MouseDown(Sender: TObject; Button: TMouseButton;
@@ -82,6 +85,7 @@ IMPLEMENTATION
 
 PROCEDURE TFormDocument.FormCreate(Sender: TObject);
 BEGIN
+
   //### NOTE: 03.11.2024
   //Bu bölüm tasarım sırasındaki karışıklığı engellemek için yazıldı
   MainPanel.Align := alClient;
@@ -99,6 +103,11 @@ BEGIN
   BitmapGrid.PixelFormat := pf24bit;
   RenderGrid(BitmapGrid.Canvas, ImageWidth, ImageHeight, 40, clWhite, clGray);
 END;
+
+procedure TFormDocument .FormResize (Sender :TObject );
+begin
+   MyResize(Point(0, 0));
+end;
 
 PROCEDURE TFormDocument.FormShow(Sender: TObject);
 BEGIN

@@ -8,6 +8,7 @@ object FormDocument: TFormDocument
   ClientHeight = 300
   ClientWidth = 400
   OnCreate = FormCreate
+  OnResize = FormResize
   OnShow = FormShow
   object MainPanel: TPanel
     Left = 0
