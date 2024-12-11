@@ -27,6 +27,7 @@ var
   curDir, markDir, mark2Dir: TDirection;
   backtrack, findloop: boolean;
 
+
 procedure hc_Fill(Image1, Image2: TImage; Button: TMouseButton;
   Shift: TShiftState; PX, PY: integer; mEvent: integer // 1:Down,2:Move:3:Up);
   );

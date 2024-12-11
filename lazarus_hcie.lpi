@@ -489,6 +489,7 @@
         <Filename Value="unitformeffect.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormEffect"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>

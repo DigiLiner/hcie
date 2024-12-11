@@ -1,60 +1,64 @@
-UNIT unitformdocument;
+unit unitformdocument;
 
 {$mode ObjFPC}{$H+}
 
-INTERFACE
+interface
 
-USES
-  Classes, ComCtrls, ExtCtrls, Menus, SysUtils, Forms, Controls, Graphics, Dialogs
+uses
+  Classes, ComCtrls, ExtCtrls, Menus
+  , SysUtils, Forms, Controls, Graphics, Dialogs
   , LResources, BGRABitmap, BGRABitmapTypes  //BGRA Bitmap
   , Types
-  , hceffects, hctypes, hcGlobals ,hcFileTypes
-  ,line, pen, circle, fill
+  , hceffects, hctypes, hcGlobals, hcFileTypes
+  , line, pen, circle, fill
   , animation
+  {$IFDEF WINDOWS}
+  ,windows
+  {$ENDIF}
+   ;
 
-  ;
-
-TYPE
+type
   { TFormDocument}
-  TFormDocument = CLASS(TForm)
-    Image1: TImage;
-    Image2: TImage;
-    ImageGrid: TImage;
+  TFormDocument = class(TForm)
+    Image1: ExtCtrls.TImage;
+    Image2: ExtCtrls.TImage;
+    ImageGrid: ExtCtrls.TImage;
     MainPanel: TPanel;
     Panel1: TPanel;
     ScrollBox1: TScrollBox;
     Timer1: TTimer;
-    PROCEDURE FormCreate(Sender: TObject);
-    procedure FormResize (Sender :TObject );
-    PROCEDURE FormShow(Sender: TObject);
-    PROCEDURE Image1Click(Sender: TObject);
-    PROCEDURE Image1MouseDown(Sender: TObject; Button: TMouseButton;
+    procedure FormCreate(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure Image1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: integer);
-    PROCEDURE Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
-    PROCEDURE Image1MouseUp(Sender: TObject; Button: TMouseButton;
+    procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
+    procedure Image1MouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: integer);
-    PROCEDURE Image1MouseWheelDown(Sender: TObject; Shift: TShiftState;
-      MousePos: TPoint; VAR Handled: boolean);
-    PROCEDURE Image1MouseWheelUp(Sender: TObject; Shift: TShiftState;
-      MousePos: TPoint; VAR Handled: boolean);
-    PROCEDURE Image1Paint(Sender: TObject);
-    PROCEDURE Image1Resize(Sender: TObject);
-    PROCEDURE MainPanelClick(Sender: TObject);
-    PROCEDURE MenuItemEmbossHighlightClick(Sender: TObject);
-    PROCEDURE MenuItemErodeBorderClick(Sender: TObject);
-    PROCEDURE MenuItemPixelateClick(Sender: TObject);
-    PROCEDURE ScrollBox1Click(Sender: TObject);
-    PROCEDURE ScrollBox1Resize(Sender: TObject);
-    PROCEDURE Timer1Timer(Sender: TObject);
-    PROCEDURE ZoomIn;
-    PROCEDURE ZoomOut;
-    PROCEDURE ZoomReset;
-    PROCEDURE Anim;
-    PROCEDURE SetZoom(MousePoint: TPoint);
-    PROCEDURE MyResize(MousePoint: TPoint);
-    PROCEDURE LoadImage;
-    PROCEDURE NewImage;
-    PROCEDURE AssignEmptyImage(_image: TImage; _width, _height: integer);
+    procedure Image1MouseWheelDown(Sender: TObject; Shift: TShiftState;
+      MousePos: TPoint; var Handled: boolean);
+    procedure Image1MouseWheelUp(Sender: TObject; Shift: TShiftState;
+      MousePos: TPoint; var Handled: boolean);
+    procedure Image1Paint(Sender: TObject);
+    procedure Image1Resize(Sender: TObject);
+    procedure MainPanelClick(Sender: TObject);
+    procedure MenuItemEmbossHighlightClick(Sender: TObject);
+    procedure MenuItemErodeBorderClick(Sender: TObject);
+    procedure MenuItemPixelateClick(Sender: TObject);
+    procedure ScrollBox1Click(Sender: TObject);
+    procedure ScrollBox1Resize(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure ZoomIn;
+    procedure ZoomOut;
+    procedure ZoomReset;
+    procedure Anim;
+    procedure SetZoom(MousePoint: TPoint);
+    procedure MyResize(MousePoint: TPoint);
+    procedure LoadImage;
+    procedure NewImage;
+    procedure AssignEmptyImage(_image: TImage; _width, _height: integer);
+
   private
     FormShown: boolean;
     zoomFactor: single;
@@ -65,27 +69,26 @@ TYPE
     ImageWidth, ImageHeight: integer;
     EmptyImage: boolean; // Boş mu olacak ,resim mi yüklenecek;
 
-  END;
+  end;
 
-VAR
+var
   FormDocument: TFormDocument;
-  BitmapGrid: TBitmap;
+  BitmapGrid: ExtCtrls.TImage;
 
   //HC Procedures
 
-PROCEDURE RenderGrid(Canvas: TCanvas; Height, Width: integer;
+procedure RenderGrid(Canvas: TCanvas; Height, Width: integer;
   Size: integer; Color1, Color2: TColor);
+function ScaleMouse(Pos: integer; ZoomFactor: single; ScaleFactor: single): integer;
 
-
-IMPLEMENTATION
+implementation
 
 {$R *.lfm}
 
 { TFormDocument }
 
-PROCEDURE TFormDocument.FormCreate(Sender: TObject);
-BEGIN
-
+procedure TFormDocument.FormCreate(Sender: TObject);
+begin
   //### NOTE: 03.11.2024
   //Bu bölüm tasarım sırasındaki karışıklığı engellemek için yazıldı
   MainPanel.Align := alClient;
@@ -98,56 +101,58 @@ BEGIN
   Image1.Anchors := [];
   // ### END NOTE ###############
   zoomFactor := 1;
-  BitmapGrid := TBitmap.Create;
-  BitmapGrid.SetSize(ImageWidth, ImageHeight);
-  BitmapGrid.PixelFormat := pf24bit;
+  BitmapGrid := ExtCtrls.TImage.Create(self);
+  BitmapGrid.Width := ImageWidth;
+  BitmapGrid.Height := ImageHeight;
   RenderGrid(BitmapGrid.Canvas, ImageWidth, ImageHeight, 40, clWhite, clGray);
-END;
-
-procedure TFormDocument .FormResize (Sender :TObject );
-begin
-   MyResize(Point(0, 0));
 end;
 
-PROCEDURE TFormDocument.FormShow(Sender: TObject);
-BEGIN
+procedure TFormDocument.FormResize(Sender: TObject);
+begin
+  MyResize(Types.Point(0, 0));
+end;
 
-END;
+procedure TFormDocument.FormShow(Sender: TObject);
+begin
 
-PROCEDURE TFormDocument.Image1Click(Sender: TObject);
-BEGIN
+end;
 
-END;
+procedure TFormDocument.Image1Click(Sender: TObject);
+begin
+             tyuu
+end;
 
-PROCEDURE TFormDocument.MenuItemEmbossHighlightClick(Sender: TObject);
-BEGIN
+procedure TFormDocument.MenuItemEmbossHighlightClick(Sender: TObject);
+begin
   hceffects.EmbossHighlight(Image1, False);
-END;
+end;
 
-PROCEDURE TFormDocument.MenuItemErodeBorderClick(Sender: TObject);
-BEGIN
+procedure TFormDocument.MenuItemErodeBorderClick(Sender: TObject);
+begin
   ErodeBorderEffect(Image1);
-END;
+end;
 
-PROCEDURE TFormDocument.MenuItemPixelateClick(Sender: TObject);
-BEGIN
+procedure TFormDocument.MenuItemPixelateClick(Sender: TObject);
+begin
   Image1 := Pixelate(Image1, 10);
-END;
+end;
 
-PROCEDURE TFormDocument.ScrollBox1Click(Sender: TObject);
-BEGIN
+procedure TFormDocument.ScrollBox1Click(Sender: TObject);
+begin
 
-END;
+end;
 
 
-PROCEDURE TFormDocument.Timer1Timer(Sender: TObject);
-BEGIN
+procedure TFormDocument.Timer1Timer(Sender: TObject);
+begin
   // İlk kez çalışacak kodlar
-  IF EmptyImage = True THEN
+  if EmptyImage = True then
     NewImage
-  ELSE
+  else
+  begin
+    NewImage;
     LoadImage;
-
+  end;
   hMouseButton := hMbNone;
   hMouseEvent := hMouseNone;
   zoomFactor := 1;
@@ -155,22 +160,22 @@ BEGIN
 
 
   Timer1.Enabled := False;
-END;
+end;
 
-PROCEDURE TFormDocument.Anim;
-BEGIN
-  animrun := NOT animrun;
-  IF animrun THEN
-    BEGIN
+procedure TFormDocument.Anim;
+begin
+  animrun := not animrun;
+  if animrun then
+  begin
     doAnim(FormDocument.Image1);
-    END;
+  end;
 
-END;
+end;
 
-PROCEDURE TFormDocument.NewImage;
-VAR
+procedure TFormDocument.NewImage;
+var
   bmp1, bmp2: TBGRABitmap;
-BEGIN
+begin
   // bmp1 := TBGRABitmap.Create(FormDocument.ImageWidth, FormDocument.ImageHeight,
   //  BGRAWhite);
 
@@ -182,36 +187,36 @@ BEGIN
   Image2.Width := Image1.Width;
   Image2.Height := Image1.Height;
   {$IFNDEF TRANSPARENCY_TEST_01}
-  	//  Temporary disabled test transparency 9.11.24
-        bmp1 := TBGRABitmap.Create(300, 300, BGRAWhite);
- 	bmp1.Draw(Image1.Canvas, 0, 0, True);
-  	bmp1.Free;       //free memory
+  //  Temporary disabled test transparency 9.11.24
+  bmp1 := TBGRABitmap.Create(300, 300, BGRAWhite);
+  bmp1.Draw(Image1.Canvas, 0, 0, True);
+  bmp1.Free;       //free memory
 
-	image1.Canvas.Clear();
-	image2.Canvas.Clear();
-   	Image1.Picture.Bitmap.PixelFormat:=pf24bit;
-	Image1.Picture.Bitmap.TransparentColor:=clBlue;
-	Image1.Picture.Bitmap.TransparentMode:=tmFixed;
-	Image1.Picture.Bitmap.Transparent:=true;
+  image1.Canvas.Clear();
+  image2.Canvas.Clear();
+  Image1.Picture.Bitmap.PixelFormat := pf24bit;
+  Image1.Picture.Bitmap.TransparentColor := clBlue;
+  Image1.Picture.Bitmap.TransparentMode := tmFixed;
+  Image1.Picture.Bitmap.Transparent := True;
 
-	Image2.Picture.Bitmap.PixelFormat:=pf24bit;
-	Image2.Picture.Bitmap.TransparentColor:=clYellow;
-	Image2.Picture.Bitmap.TransparentMode:=tmFixed;
-	Image2.Picture.Bitmap.Transparent:=true;
+  Image2.Picture.Bitmap.PixelFormat := pf24bit;
+  Image2.Picture.Bitmap.TransparentColor := clYellow;
+  Image2.Picture.Bitmap.TransparentMode := tmFixed;
+  Image2.Picture.Bitmap.Transparent := True;
 
-         // 200x200 boyutlarında boş bir resim ata
-	AssignEmptyImage(Image1, Image1.Width, Image1.Height);
-	AssignEmptyImage(Image2, Image1.Width, Image1.Height);
+  // 200x200 boyutlarında boş bir resim ata
+  AssignEmptyImage(Image1, Image1.Width, Image1.Height);
+  AssignEmptyImage(Image2, Image1.Width, Image1.Height);
   {$ENDIF}
 
   Image2.Hide;
   zoomFactor := 1;
-END;
+end;
 
-PROCEDURE TFormDocument.AssignEmptyImage(_image: TImage; _width, _height: integer);
-BEGIN
-  _image.Picture.Bitmap := TBitmap.Create;
-    TRY
+procedure TFormDocument.AssignEmptyImage(_image: TImage; _width, _height: integer);
+begin
+  _image.Picture.Bitmap := Graphics.TBitmap.Create;
+  try
   { //Transparency not work
     //_Image.Picture.Bitmap.Transparent := True;
     //FormMain.Image2.Picture.Bitmap.Transparent := True;
@@ -222,30 +227,45 @@ BEGIN
     _image.Picture.Bitmap.Width := _width;
     _image.Picture.Bitmap.Height := _height;
     {$IFNDEF TRANSPARENCY_TEST_01}
-	_Image.Picture.Bitmap.Canvas.Brush.Color := $FFFFFF;
-	_Image.Picture.Bitmap.Canvas.Brush.Style := bsSolid;
-	_Image.Picture.Bitmap.Canvas.FillRect(0, 0, _Width, _Height);
+    _Image.Picture.Bitmap.Canvas.Brush.Color := $FFFFFF;
+    _Image.Picture.Bitmap.Canvas.Brush.Style := bsSolid;
+    _Image.Picture.Bitmap.Canvas.FillRect(0, 0, _Width, _Height);
     {$ENDIF}
 
-    FINALLY
+  finally
 
-    END;
-END;
+  end;
+end;
 
-PROCEDURE TFormDocument.LoadImage();
-BEGIN
-  Image1.Picture.LoadFromFile(fileName);
+procedure TFormDocument.LoadImage();
+var
+  bmp1, bmp2: TBGRABitmap;
+begin
+  bmp1 := TBGRABitmap.Create(filename);
+  image1.Picture.Bitmap.SetSize(bmp1.Width, bmp1.Height);
+  bmp1.Draw(Image1.Canvas, 0, 0, True);
+  bmp1.Free;       //free memory
+  //bmp2.free;
+  Image1.Top := 0;
+  Image1.Left := 0;
+
   Image1.Width := Image1.Picture.Width;
   Image1.Height := Image1.Picture.Height;
   Image2.Width := Image1.Picture.Width;
   Image2.Height := Image1.Picture.Height;
+  ImageWidth := Image1.Picture.Width;
+  ImageHeight := Image1.Picture.Height;
+  image1.AutoSize := False;
+  Image1.AutoSize := False;
+  Image2.Hide;
+  zoomFactor := 1;
 
-END;
+end;
 
 {$REGION 'ZOOM'}
 
-PROCEDURE TFormDocument.SetZoom(MousePoint: TPoint);
-BEGIN
+procedure TFormDocument.SetZoom(MousePoint: TPoint);
+begin
   // with FormDocument do
   // begin
   Image1.Width := round(Image2.Width * zoomFactor);
@@ -255,35 +275,35 @@ BEGIN
   //FormMain.Image2.Scale := _zoomFactor;
   MyResize(MousePoint);
   //end;
-END;
+end;
 //todo ana formdaki toolbar -> zoom işlemlerinin hepsine bağlantı 8.11.24
 //todo anaform toolbar butonlarını aktif-pasif et, menüleri uyarla
-PROCEDURE TFormDocument.ZoomIn;
-BEGIN
+procedure TFormDocument.ZoomIn;
+begin
   zoomFactor := zoomFactor * 1.2;
-  SetZoom(Point(0, 0));
-END;
+  SetZoom(Types.Point(0, 0));
+end;
 
-PROCEDURE TFormDocument.ZoomOut;
-BEGIN
+procedure TFormDocument.ZoomOut;
+begin
   zoomFactor := zoomFactor / 1.2;
-  SetZoom(Point(0, 0));
-END;
+  SetZoom(Types.Point(0, 0));
+end;
 
-PROCEDURE TFormDocument.ZoomReset;
-BEGIN
+procedure TFormDocument.ZoomReset;
+begin
   zoomFactor := 1;
-  SetZoom(Point(0, 0));
-END;
+  SetZoom(Types.Point(0, 0));
+end;
 
 {$ENDREGION}
 
-PROCEDURE TFormDocument.MyResize(MousePoint: TPoint);
-VAR
+procedure TFormDocument.MyResize(MousePoint: TPoint);
+var
   border: integer;
   PX, PY: integer;
   ScrollPosX, ScrollPosY: integer;
-BEGIN
+begin
   // with FormDocument do
   // begin
   // Detect the scaling factor (for example, 125% scaling = 1.25)
@@ -299,38 +319,36 @@ BEGIN
 
   Panel1.Width := Image1.Width + (border * 2);
   Panel1.Height := Image1.Height + (border * 2);
-  IF (MousePoint.X <> 0) OR (MousePoint.Y <> 0) THEN
-    BEGIN
+  if (MousePoint.X <> 0) or (MousePoint.Y <> 0) then
+  begin
     ScrollPosX := MousePoint.X;
     ScrollPosY := MousePoint.Y;
     //   ScrollBox1.HorzScrollBar.Position:=ScrollPosX;
     //  ScrollBox1.VertScrollBar.Position:=ScrollPosY;
-    END;
+  end;
 
 
   ScrollBox1.UpdateScrollbars;
 
   //end;
 
-END;
+end;
 
 {$REGION 'MOUSE EVENTS'}
 
 //########### MOUSE DOWN ##############
-PROCEDURE TFormDocument.Image1MouseDown(Sender: TObject; Button: TMouseButton;
+procedure TFormDocument.Image1MouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: integer);
-BEGIN
+begin
   // Detect the scaling factor (for example, 125% scaling = 1.25)
   ScaleFactor := Screen.PixelsPerInch / 96; // Assuming 96 DPI is the baseline
-  oldX := round(round(X / zoomFactor) / ScaleFactor);
-  oldy := round(round(Y / zoomFactor) / ScaleFactor);
-  //oldX := X;
-  //oldy := y;
+  oldX := ScaleMouse(x, zoomFactor, ScaleFactor);
+  oldy := ScaleMouse(y, zoomFactor, ScaleFactor);
   hMouseEvent := hMouseDown;
 
 
-  IF Button = TMouseButton.mbLeft THEN
-    BEGIN
+  if Button = TMouseButton.mbLeft then
+  begin
     hMouseButton := hMbLeft;
     Image1.Canvas.pen.Width := penWidth;
     Image1.Canvas.pen.Color := foreColor;
@@ -340,149 +358,155 @@ BEGIN
     // image1.Canvas.AntialiasingMode := amOn;
     // Image1.Transparent := True;
     hcShift := Shift;
-    PX := round(round(X / zoomFactor) / ScaleFactor);
-    PY := round(round(Y / zoomFactor) / ScaleFactor);
+    PX := ScaleMouse(x, zoomFactor, ScaleFactor);
+    py := ScaleMouse(y, zoomFactor, ScaleFactor);
+    ;
 
-    CASE hctool OF
+    case hctool of
       TOOL_PEN: hc_pen(Image1, hcShift, PX, PY);
       TOOL_LINE: hc_line(Image1, Image2, hcShift, PX, PY);
       TOOL_ELLIPSE1: hc_ellipse1(Image1, Image2, hcShift, PX, PY);
       TOOL_FILL: hc_Fill(Image1, Image2, Button, hcShift, PX, PY, hMouseEvent);
-      ELSE
+      else
       // Handle unexpected values
 
-      END;
-    END;
+    end;
+  end;
 
-END;
+end;
 // ####  MOUSE MOVE #########################
-PROCEDURE TFormDocument.Image1MouseMove(Sender: TObject; Shift: TShiftState;
+procedure TFormDocument.Image1MouseMove(Sender: TObject; Shift: TShiftState;
   X, Y: integer);
-BEGIN
+begin
   hMouseEvent := hMouseMove;
-  PX := round(round(X / zoomFactor) / ScaleFactor);
-  PY := round(round(Y / zoomFactor) / ScaleFactor);
+  PX := ScaleMouse(x, zoomFactor, ScaleFactor);
+  py := ScaleMouse(y, zoomFactor, ScaleFactor);
 
-  IF hMouseButton = hMbLeft THEN
-    BEGIN
+  if hMouseButton = hMbLeft then
+  begin
     hcShift := Shift;
 
 
-    CASE hctool OF
+    case hctool of
       TOOL_PEN: hc_pen(Image1, Shift, PX, PY);
       TOOL_LINE: hc_line(Image1, Image2, Shift, PX, PY);
       TOOL_ELLIPSE1: hc_ellipse1(Image1, Image2, Shift, PX, PY);
       TOOL_FILL: ;
+      TOOL_BRUSH: ;
 
-      ELSE
+      else
       // Handle unexpected values
 
-      END;
-    END
-  ELSE IF hMouseButton = hmbRight THEN
-      BEGIN
+    end;
+  end
+  else if hMouseButton = hmbRight then
+  begin
 
-      END
-    ELSE IF Shift = [ssMiddle] THEN
-        BEGIN
+  end
+  else if Shift = [ssMiddle] then
+  begin
     //PAN
     // OldX mouse basıldığındaki ilk posizyon. PX şu anki pozisyon. Resim aradaki fark kadar kaydırılıyor.
     //PX ve  OldX zoomFactor eklenmiş olarak hesaplanıyor
-        ScrollBox1.HorzScrollBar.Position :=
-          ScrollBox1.HorzScrollBar.Position - (PX - oldX);
-        ScrollBox1.VertScrollBar.Position :=
-          ScrollBox1.VertScrollBar.Position - (PY - oldy);
+    ScrollBox1.HorzScrollBar.Position :=
+      ScrollBox1.HorzScrollBar.Position - (PX - oldX);
+    ScrollBox1.VertScrollBar.Position :=
+      ScrollBox1.VertScrollBar.Position - (PY - oldy);
 
-        END;
+  end;
   // StatusBar1.Panels[0].Text
   UpdateText('X: ' + X.ToString + ' ' + ' Y: ' + Y.ToString + ' - ' +
     ' PX: ' + PX.ToString + ' ' + ' PY: ' + PY.ToString + ' -  ' +
-    ' Scale: ' + ' Image1 Left :' + Image1.Left.ToString + ' Image1 Top :' +
-    Image1.Top.ToString + ScaleFactor.ToString + ' ' + ' Zoom: ' +
-    zoomFactor.ToString + ' H Scroll :' + ScrollBox1.HorzScrollBar.Position.ToString +
-    ' V Scroll :' + ScrollBox1.VertScrollBar.Position.ToString);
-END;
-
+    ' Scale: ' + ScaleFactor.ToString + ' Image1 Left :' + Image1.Left.ToString +
+    ' Image1 Top :' + Image1.Top.ToString + ScaleFactor.ToString +
+    ' ' + ' Zoom: ' + zoomFactor.ToString + ' H Scroll :' +
+    ScrollBox1.HorzScrollBar.Position.ToString + ' V Scroll :' +
+    ScrollBox1.VertScrollBar.Position.ToString);
+end;
 
 //######### MOUSE UP ####################
 //Common tasks after end of  drawing
-PROCEDURE TFormDocument.Image1MouseUp(Sender: TObject; Button: TMouseButton;
+procedure TFormDocument.Image1MouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: integer);
-BEGIN
+begin
   hMouseEvent := hMouseUp;
-  PX := round(round(X / zoomFactor) / ScaleFactor);
-  PY := round(round(Y / zoomFactor) / ScaleFactor);
-  CASE hctool OF
+  PX := ScaleMouse(x, zoomFactor, ScaleFactor);
+  py := ScaleMouse(y, zoomFactor, ScaleFactor);
+  case hctool of
     TOOL_PEN: hc_pen(Image1, hcShift, PX, PY);
     TOOL_LINE: hc_line(Image1, Image2, hcShift, PX, PY);
     TOOL_ELLIPSE1: hc_ellipse1(Image1, Image2, hcShift, PX, PY);
     TOOL_FILL: hc_Fill(Image1, Image2, Button, hcShift, PX, PY, hMouseEvent);
-    ELSE
+    else
     // Handle unexpected values
 
-    END;
+  end;
   Image2.Canvas.Draw(0, 0, Image1.Picture.Graphic);
   hMouseButton := hMbNone;
   hMouseEvent := hMouseNone;
 
-END;
+end;
 
-PROCEDURE TFormDocument.Image1MouseWheelDown(Sender: TObject;
-  Shift: TShiftState; MousePos: TPoint; VAR Handled: boolean);
-BEGIN
+function ScaleMouse(Pos: integer; ZoomFactor: single; ScaleFactor: single): integer;
+begin
+  Result := round(pos / zoomFactor);   // / ScaleFactor);
+end;
+
+procedure TFormDocument.Image1MouseWheelDown(Sender: TObject;
+  Shift: TShiftState; MousePos: TPoint; var Handled: boolean);
+begin
   zoomFactor := zoomFactor / 1.1;
   SetZoom(MousePos);
-END;
+end;
 
-PROCEDURE TFormDocument.Image1MouseWheelUp(Sender: TObject; Shift: TShiftState;
-  MousePos: TPoint; VAR Handled: boolean);
-BEGIN
+procedure TFormDocument.Image1MouseWheelUp(Sender: TObject; Shift: TShiftState;
+  MousePos: TPoint; var Handled: boolean);
+begin
   zoomFactor := zoomFactor * 1.1;
   SetZoom(MousePos);
-END;
+end;
 
-PROCEDURE TFormDocument.Image1Paint(Sender: TObject);
-BEGIN
-  Image1.Canvas.Draw(0, 0, BitmapGrid);
-END;
+procedure TFormDocument.Image1Paint(Sender: TObject);
+begin
+  Image1.Canvas.Draw(0, 0, BitmapGrid.Picture.Bitmap);
+end;
 
 
 // MOUSE EVENTS END //
 {$ENDREGION 'MOUSE EVENTS'}
 
+procedure TFormDocument.Image1Resize(Sender: TObject);
+begin
+  MyResize(Types.Point(0, 0));
+end;
 
-PROCEDURE TFormDocument.Image1Resize(Sender: TObject);
-BEGIN
-  MyResize(Point(0, 0));
-END;
-
-PROCEDURE TFormDocument.ScrollBox1Resize(Sender: TObject);
-BEGIN
-  MyResize(Point(0, 0));
-END;
+procedure TFormDocument.ScrollBox1Resize(Sender: TObject);
+begin
+  MyResize(Types.Point(0, 0));
+end;
 
 
-PROCEDURE TFormDocument.MainPanelClick(Sender: TObject);
-BEGIN
+procedure TFormDocument.MainPanelClick(Sender: TObject);
+begin
 
-END;
+end;
 
-PROCEDURE RenderGrid(Canvas: TCanvas; Height, Width: integer;
+procedure RenderGrid(Canvas: TCanvas; Height, Width: integer;
   Size: integer; Color1, Color2: TColor);
-VAR
+var
   Y: integer;
   X: integer;
-BEGIN
-  FOR Y := 0 TO Height DIV Size DO
-    FOR X := 0 TO Width DIV Size DO
-      BEGIN
-      IF Odd(X) XOR Odd(Y) THEN
+begin
+  for Y := 0 to Height div Size do
+    for X := 0 to Width div Size do
+    begin
+      if Odd(X) xor Odd(Y) then
         Canvas.Brush.Color := Color1
-      ELSE
+      else
         Canvas.Brush.Color := Color2;
-      Canvas.FillRect(Rect(X * Size, Y * Size, (X + 1) * Size, (Y + 1) * Size));
-      END;
-END;
+      Canvas.FillRect(Types.Rect(X * Size, Y * Size, (X + 1) * Size, (Y + 1) * Size));
+    end;
+end;
 
 
-END.
+end.

@@ -13,18 +13,18 @@ uses
   {$IFDEF WINDOWS}
   Windows,Registry,
   {$ENDIF}
-  Classes ,interfaces ,SysUtils ,Forms ,Controls ,Graphics ,Dialogs ,Menus ,
-  ExtCtrls ,StdCtrls ,ComCtrls ,ExtDlgs ,AnchorDockPanel ,crt ,unitFormNewImage ,
-  BCFluentSlider ,BCToolBar ,BGRAFlashProgressBar ,BGRAImageList ,
-  BGRAImageManipulation ,BGRACustomDrawn ,BGRAShape ,BCTrackbarUpdown ,
-  BCMaterialProgressBarMarquee ,BCFluentProgressRing ,BCLeaLCDDisplay ,BCLeaLED ,
-  BGRASVGImageList ,HexaColorPicker ,mbColorList ,mbColorPalette ,hctypes ,
-  hcGlobals ,animation ,hcslider // Sliders
-  ,unitformeffect
+  Classes, interfaces, SysUtils, Forms, Controls, Graphics, Dialogs, Menus,
+  ExtCtrls, StdCtrls, ComCtrls, ExtDlgs, AnchorDockPanel, crt, unitFormNewImage,
+  BCFluentSlider, BCToolBar, BGRAFlashProgressBar, BGRAImageList,
+  BGRAImageManipulation, BGRACustomDrawn, BGRAShape, BCTrackbarUpdown,
+  BCMaterialProgressBarMarquee, BCFluentProgressRing, BCLeaLCDDisplay, BCLeaLED,
+  BGRASVGImageList, HexaColorPicker, mbColorList, mbColorPalette, hctypes,
+  hcGlobals, animation, hcslider // Sliders
+  , unitformeffect
   , line, pen, circle, fill
   , unitCanvasSizeDialog
   , unitformdocument
-  , LResources ,ColorBox, BGRABitmap, BGRABitmapTypes  //BGRA Bitmap
+  , LResources, ColorBox, BGRABitmap, BGRABitmapTypes  //BGRA Bitmap
   , Types, BCTypes;
 
 type
@@ -57,10 +57,10 @@ type
     BCLeaLED1: TBCLeaLED;
     BCLeaLED2: TBCLeaLED;
     BCLeaLED3: TBCLeaLED;
-    BCToolBar1 :TBCToolBar ;
+    BCToolBar1: TBCToolBar;
     BGRAGraphicControl1: TBGRAGraphicControl;
-    BGRAImageList1 :TBGRAImageList ;
-    BGRASVGImageList1 :TBGRASVGImageList ;
+    BGRAImageList1: TBGRAImageList;
+    BGRASVGImageList1: TBGRASVGImageList;
     CalculatorDialog1: TCalculatorDialog;
     ColorDialog1: TColorDialog;
     EditWidth: TEdit;
@@ -69,10 +69,8 @@ type
     FontDialog1: TFontDialog;
     HexaColorPicker1: THexaColorPicker;
     IdleTimer1: TIdleTimer;
-    Image1 :TImage ;
+    Image1: TImage;
 
-    ImageList1: TImageList;
-    ImageList2: TImageList;
     ImageRadius: TImage;
     ImageTransparency: TImage;
     ImageWidth: TImage;
@@ -159,7 +157,7 @@ type
     Separator1: TMenuItem;
     Separator2: TMenuItem;
     Separator3: TMenuItem;
-    StaticText1 :TStaticText ;
+    StaticText1: TStaticText;
     StatusBar1: TStatusBar;
     TabSheet1: TTabSheet;
     Timer1: TTimer;
@@ -171,7 +169,8 @@ type
     S5: TToolButton;
     S6: TToolButton;
     S7: TToolButton;
-    ToolButton1 :TToolButton ;
+    ToolButton1: TToolButton;
+    ToolButtonToolSize: TToolButton;
     ToolButtonFill: TToolButton;
     ToolButtonRedo: TToolButton;
     ToolButtonClear: TToolButton;
@@ -197,7 +196,7 @@ type
     TrackBar1: TTrackBar;
 
     procedure BCMaterialProgressBarMarquee1Click(Sender: TObject);
-    procedure BCToolBar1Redraw (Sender :TObject ; Bitmap :TBGRABitmap );
+    procedure BCToolBar1Redraw(Sender: TObject; Bitmap: TBGRABitmap);
     procedure BCTrackbarUpdown1Change(Sender: TObject; AByUser: boolean);
     procedure CheckBoxWebSafeChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -211,14 +210,14 @@ type
       X, Y: integer);
     procedure MenuItemExitClick(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
-    procedure PageControl1CloseTabClicked (Sender :TObject );
+    procedure PageControl1CloseTabClicked(Sender: TObject);
     procedure PageControl1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: integer);
 
     procedure ScrollBox1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure TimerStatusTimer(Sender: TObject);
-    procedure ToolButton1Click (Sender :TObject );
+    procedure ToolButton1Click(Sender: TObject);
     procedure ToolButtonFillClick(Sender: TObject);
     procedure ToolButtonNewClick(Sender: TObject);
     procedure ToolButtonBlurClick(Sender: TObject);
@@ -227,7 +226,10 @@ type
     procedure ToolButtonPenClick(Sender: TObject);
     procedure ToolButtonLineClick(Sender: TObject);
     procedure ToolButtonPixelateClick(Sender: TObject);
+    procedure ToolButtonToolSizeClick(Sender: TObject);
     procedure ToolButtonZoomInClick(Sender: TObject);
+    procedure ToolButtonZoomOutClick(Sender: TObject);
+    procedure ToolButtonZoomResetClick(Sender: TObject);
 
     //In Form procedures End
 
@@ -245,7 +247,7 @@ var
 
 function IsDarkTheme: boolean;
 procedure ApplyTheme(Form: TForm);
-function findDocument(docTag: integer): TFormDocument;
+function findDocument(docTag: integer = -1): TFormDocument;
 
 implementation
 
@@ -297,7 +299,7 @@ procedure TPageControl.PaintWindow(DC: HDC);
 var
   i  :integer;
   R : TRect;
-  bm : TBitmap;
+  //bm : TBitmap;
   Pen: HPEN;
   OldPen : HPEN;
   DrawColor: TColor;
@@ -306,10 +308,8 @@ var
 begin
   inherited PaintWindow(DC);
 
-  bm := TBitmap.Create;
-  try
-    bm.SetSize(16, 16);
-    Images.GetBitmap(0, bm);
+   try
+
      SetLength(onmouse,PageCount +1);
 
     for i := 0 to Pred(PageCount) do
@@ -342,7 +342,7 @@ begin
           //       btnSize, btnSize, bm.Canvas.Handle, 0, 0, 16, 16, cmSrcCopy);
     end;
   finally
-    bm.Free;
+
     FormMain.Timer1.Enabled:=True;
     SelectObject(DC, OldPen);
   DeleteObject(Pen);
@@ -369,8 +369,8 @@ begin
   if OpenPictureDialog1.Execute then
   begin
     NewPage := PageControl1.AddTabSheet;
-    NewDoc := TFormDocument.Create(Application);
-    NewDoc.Caption := OpenPictureDialog1.FileName;
+    NewDoc := TFormDocument.Create(Self);
+    NewDoc.BorderStyle := bsNone;  //Necessary for Linux
     NewDoc.EmptyImage := False; //Load from File
     NewDoc.Parent := NewPage;
     NewDoc.WindowState := wsMaximized;
@@ -401,9 +401,35 @@ begin
 
 end;
 
+procedure TFormMain.ToolButtonToolSizeClick(Sender: TObject);
+var
+  CounterVar: integer;
+begin
+
+  BCToolBar1.ButtonWidth := 16;
+  BCToolBar1.ButtonHeight := 16;
+
+  for CounterVar := 0 to Pred(BCToolBar1.ButtonCount - 1) do
+  begin
+    BCToolBar1.Buttons[CounterVar].Width := 16;
+    BCToolBar1.Buttons[CounterVar].Height := 16;
+  end;
+end;
+
 procedure TFormMain.ToolButtonZoomInClick(Sender: TObject);
 begin
-  findDocument(5).ZoomIn;
+  //Doctag parameter not used yet , use -1
+  findDocument.ZoomIn;
+end;
+
+procedure TFormMain.ToolButtonZoomOutClick(Sender: TObject);
+begin
+  findDocument.ZoomOut;
+end;
+
+procedure TFormMain.ToolButtonZoomResetClick(Sender: TObject);
+begin
+  findDocument.ZoomReset;
 end;
 
 
@@ -562,13 +588,13 @@ begin
     begin
       NewPage := PageControl1.AddTabSheet;
       NewDoc := TFormDocument.Create(Self);   //Necessary for Linux
-      NewDoc.BorderStyle:=bsNone;  //Necessary for Linux
+      NewDoc.BorderStyle := bsNone;  //Necessary for Linux
       NewDoc.ImageWidth := DialogForm.NewImageWidth;
       NewDoc.ImageHeight := DialogForm.NewImageHeight;
       NewDoc.Caption := 'NewImage';
       NewDoc.EmptyImage := True;
       NewDoc.Parent := NewPage;
-      NewDoc.Align:=alClient; //Necessary for Linux
+      NewDoc.Align := alClient; //Necessary for Linux
       NewDoc.WindowState := wsMaximized;
       Inc(imageCounter); // Increment last image number
       NewPage.Caption := 'Image' + imageCounter.ToString;
@@ -616,10 +642,10 @@ begin
 
 end;
 
-procedure TFormMain .BCToolBar1Redraw (Sender :TObject ; Bitmap :TBGRABitmap );
+procedure TFormMain.BCToolBar1Redraw(Sender: TObject; Bitmap: TBGRABitmap);
 begin
   // This code paints toolbar background
-   Bitmap.Fill(clBtnFace);
+  Bitmap.Fill(clBtnFace);
 end;
 
 procedure TFormMain.BCTrackbarUpdown1Change(Sender: TObject; AByUser: boolean);
@@ -705,10 +731,10 @@ begin
 
 end;
 
-procedure TFormMain .PageControl1CloseTabClicked (Sender :TObject );
+procedure TFormMain.PageControl1CloseTabClicked(Sender: TObject);
 begin
   //Linux only
-    PageControl1.ActivePage.Free;
+  PageControl1.ActivePage.Free;
 end;
 
 procedure TFormMain.PageControl1MouseDown(Sender: TObject; Button: TMouseButton;
@@ -718,7 +744,8 @@ begin
 end;
 
 //Use to active image page
-function findDocument(docTag: integer): TFormDocument;
+//Doctag not used yet (use -1), Reserved for future
+function findDocument(docTag: integer = -1): TFormDocument;
 var
   ActiveDoc: TFormDocument;
   i: integer;
@@ -757,10 +784,9 @@ begin
   end;
 end;
 
-procedure TFormMain .ToolButton1Click (Sender :TObject );
+procedure TFormMain.ToolButton1Click(Sender: TObject);
 var
-   frmEffect : TformEffect; // Declare a variable for the new form
-
+  frmEffect: TformEffect; // Declare a variable for the new form
 begin
   // Create an instance of TMyForm
   frmEffect := TformEffect.Create(nil); // nil means it has no owner
