@@ -119,7 +119,7 @@ end;
 
 procedure TFormDocument.Image1Click(Sender: TObject);
 begin
-             tyuu
+
 end;
 
 procedure TFormDocument.MenuItemEmbossHighlightClick(Sender: TObject);
@@ -150,7 +150,6 @@ begin
     NewImage
   else
   begin
-    NewImage;
     LoadImage;
   end;
   hMouseButton := hMbNone;
@@ -191,7 +190,8 @@ begin
   bmp1 := TBGRABitmap.Create(300, 300, BGRAWhite);
   bmp1.Draw(Image1.Canvas, 0, 0, True);
   bmp1.Free;       //free memory
-
+  Image1.Top := 0;
+  Image1.Left := 0;
   image1.Canvas.Clear();
   image2.Canvas.Clear();
   Image1.Picture.Bitmap.PixelFormat := pf24bit;
@@ -352,6 +352,7 @@ begin
     hMouseButton := hMbLeft;
     Image1.Canvas.pen.Width := penWidth;
     Image1.Canvas.pen.Color := foreColor;
+    Image1.Canvas.pen.Style:= pens
     { RGBToColor(RedComponent(foreColor),GreenComponent(foreColor), BlueComponent(foreColor));   }
     // Image1.Canvas.Brush.Style := bsClear;    //todo daha sonra ayarla
     // Image1.Canvas.Brush.Color := clWhite;

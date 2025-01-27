@@ -11,7 +11,6 @@ object FormDocument: TFormDocument
   OnCreate = FormCreate
   OnResize = FormResize
   OnShow = FormShow
-  LCLVersion = '3.4.0.0'
   object MainPanel: TPanel
     Left = 0
     Height = 260
@@ -23,18 +22,18 @@ object FormDocument: TFormDocument
     TabOrder = 0
     OnClick = MainPanelClick
     object ScrollBox1: TScrollBox
-      Left = -89
-      Height = 176
-      Top = 40
-      Width = 278
+      Left = -123
+      Height = 219
+      Top = 19
+      Width = 346
       HorzScrollBar.Increment = 20
-      HorzScrollBar.Page = 274
+      HorzScrollBar.Page = 342
       VertScrollBar.Increment = 21
-      VertScrollBar.Page = 172
+      VertScrollBar.Page = 215
       Anchors = []
       AutoSize = True
-      ClientHeight = 172
-      ClientWidth = 274
+      ClientHeight = 215
+      ClientWidth = 342
       Color = clAppWorkspace
       ParentBackground = False
       ParentColor = False

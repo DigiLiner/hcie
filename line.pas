@@ -30,7 +30,7 @@ begin
     // Image1.Bitmap.Line(oldX, oldy, px, py,foreColor);
 
     Image1.Canvas.Line(oldX, oldy, px, py);
-
+  
   end
   //UP
   else if (hMouseButton = hmbLeft) and (hMouseEvent = hMouseUp) then

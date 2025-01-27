@@ -308,10 +308,8 @@ var
 begin
   inherited PaintWindow(DC);
 
-  bm := TBitmap.Create;
-  try
-    bm.SetSize(16, 16);
-    Images.GetBitmap(0, bm);
+   try
+
      SetLength(onmouse,PageCount +1);
 
     for i := 0 to Pred(PageCount) do
@@ -344,7 +342,7 @@ begin
           //       btnSize, btnSize, bm.Canvas.Handle, 0, 0, 16, 16, cmSrcCopy);
     end;
   finally
-    bm.Free;
+
     FormMain.Timer1.Enabled:=True;
     SelectObject(DC, OldPen);
   DeleteObject(Pen);

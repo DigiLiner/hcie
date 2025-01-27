@@ -1,11 +1,11 @@
 object FormMain: TFormMain
   Left = 549
-  Height = 515
+  Height = 649
   Top = 255
-  Width = 1381
+  Width = 1042
   Caption = 'FormMain'
-  ClientHeight = 515
-  ClientWidth = 1381
+  ClientHeight = 649
+  ClientWidth = 1042
   DesignTimePPI = 120
   DoubleBuffered = True
   Menu = MainMenu1
@@ -13,14 +13,14 @@ object FormMain: TFormMain
   ParentDoubleBuffered = False
   Visible = True
   object AnchorDockPanel1: TAnchorDockPanel
-    Left = 1131
-    Height = 442
+    Left = 792
+    Height = 576
     Top = 44
     Width = 250
     Align = alRight
     BorderStyle = bsSingle
     Caption = 'AnchorDockPanel1'
-    ClientHeight = 438
+    ClientHeight = 572
     ClientWidth = 246
     Constraints.MinWidth = 250
     DockSite = True
@@ -67,27 +67,27 @@ object FormMain: TFormMain
       AnchorSideBottom.Control = AnchorDockPanel1
       AnchorSideBottom.Side = asrBottom
       Left = -10
-      Height = 140
+      Height = 274
       Top = 296
       Width = 254
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Around = 1
       BevelOuter = bvLowered
       Caption = 'Panel2'
-      ClientHeight = 140
+      ClientHeight = 274
       ClientWidth = 254
       FullRepaint = False
       ParentBackground = False
       TabOrder = 0
       object FlowPanel1: TPanel
         Left = 1
-        Height = 132
+        Height = 266
         Top = 1
         Width = 252
         Align = alTop
         Anchors = [akTop, akLeft, akRight, akBottom]
         Caption = 'FlowPanel1'
-        ClientHeight = 132
+        ClientHeight = 266
         ClientWidth = 252
         FullRepaint = False
         ParentBackground = False
@@ -245,8 +245,8 @@ object FormMain: TFormMain
   object StatusBar1: TStatusBar
     Left = 0
     Height = 29
-    Top = 486
-    Width = 1381
+    Top = 620
+    Width = 1042
     Panels = <    
       item
         Text = 'Coords XY'
@@ -258,7 +258,7 @@ object FormMain: TFormMain
     Left = 0
     Height = 44
     Top = 0
-    Width = 1381
+    Width = 1042
     AutoSize = True
     ButtonHeight = 42
     ButtonWidth = 42
